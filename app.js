@@ -1473,38 +1473,48 @@ function drawConnections() {
     const rectFrom = fromEl.getBoundingClientRect();
     const rectTo = toEl.getBoundingClientRect();
     
-    // Absolute positions relative to scaled parent canvasContent
-    const fromX = (rectFrom.left - parentRect.left + rectFrom.width) / zoom;
-    const fromY = (rectFrom.top - parentRect.top + rectFrom.height / 2) / zoom;
+    // Determine direction based on card centers
+    const fromCenterX = rectFrom.left + rectFrom.width / 2;
+    const toCenterX = rectTo.left + rectTo.width / 2;
     
-    const toX = (rectTo.left - parentRect.left) / zoom;
-    const toY = (rectTo.top - parentRect.top + rectTo.height / 2) / zoom;
-    
-    // Add visual connected class to trigger node boxes opacity
-    fromEl.classList.add("connected");
-    toEl.classList.add("connected");
-    
-    // Beautiful Bezier curve with dynamic offsets based on direction
-    const dx = toX - fromX;
-    const dy = toY - fromY;
-    
+    let fromX, fromY, toX, toY;
     let cp1x, cp1y, cp2x, cp2y;
     
-    if (dx > 0) {
-      // Going forwards: smooth S-curve with controlled offset to prevent overshoot
-      const controlOffset = Math.max(30, Math.min(120, dx * 0.4));
+    if (toCenterX >= fromCenterX) {
+      // Forward connection (left to right): connect right side of source to left side of target
+      fromX = (rectFrom.left - parentRect.left + rectFrom.width) / zoom;
+      fromY = (rectFrom.top - parentRect.top + rectFrom.height / 2) / zoom;
+      
+      toX = (rectTo.left - parentRect.left) / zoom;
+      toY = (rectTo.top - parentRect.top + rectTo.height / 2) / zoom;
+      
+      const dx = toX - fromX;
+      const absDx = Math.abs(dx);
+      const controlOffset = Math.max(30, Math.min(120, absDx * 0.4));
       cp1x = fromX + controlOffset;
       cp1y = fromY;
       cp2x = toX - controlOffset;
       cp2y = toY;
     } else {
-      // Going backwards (loop-back): wide loop to clear the cards beautifully
-      const controlOffset = Math.max(180, Math.abs(dx) * 0.6 + Math.abs(dy) * 0.35);
-      cp1x = fromX + controlOffset;
+      // Backward connection (right to left): connect left side of source to right side of target
+      fromX = (rectFrom.left - parentRect.left) / zoom;
+      fromY = (rectFrom.top - parentRect.top + rectFrom.height / 2) / zoom;
+      
+      toX = (rectTo.left - parentRect.left + rectTo.width) / zoom;
+      toY = (rectTo.top - parentRect.top + rectTo.height / 2) / zoom;
+      
+      const dx = fromX - toX;
+      const absDx = Math.abs(dx);
+      const controlOffset = Math.max(30, Math.min(120, absDx * 0.4));
+      cp1x = fromX - controlOffset;
       cp1y = fromY;
-      cp2x = toX - controlOffset;
+      cp2x = toX + controlOffset;
       cp2y = toY;
     }
+    
+    // Add visual connected class to trigger node boxes opacity
+    fromEl.classList.add("connected");
+    toEl.classList.add("connected");
     
     const d = `M ${fromX} ${fromY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${toX} ${toY}`;
     
