@@ -1484,12 +1484,27 @@ function drawConnections() {
     fromEl.classList.add("connected");
     toEl.classList.add("connected");
     
-    // Beautiful Bezier S-curve
-    const controlOffset = Math.max(80, Math.abs(toX - fromX) * 0.45);
-    const cp1x = fromX + controlOffset;
-    const cp1y = fromY;
-    const cp2x = toX - controlOffset;
-    const cp2y = toY;
+    // Beautiful Bezier curve with dynamic offsets based on direction
+    const dx = toX - fromX;
+    const dy = toY - fromY;
+    
+    let cp1x, cp1y, cp2x, cp2y;
+    
+    if (dx > 0) {
+      // Going forwards: smooth S-curve with controlled offset to prevent overshoot
+      const controlOffset = Math.max(30, Math.min(120, dx * 0.4));
+      cp1x = fromX + controlOffset;
+      cp1y = fromY;
+      cp2x = toX - controlOffset;
+      cp2y = toY;
+    } else {
+      // Going backwards (loop-back): wide loop to clear the cards beautifully
+      const controlOffset = Math.max(180, Math.abs(dx) * 0.6 + Math.abs(dy) * 0.35);
+      cp1x = fromX + controlOffset;
+      cp1y = fromY;
+      cp2x = toX - controlOffset;
+      cp2y = toY;
+    }
     
     const d = `M ${fromX} ${fromY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${toX} ${toY}`;
     
