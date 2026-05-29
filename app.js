@@ -1442,7 +1442,7 @@ function drawConnections() {
   if (!svg) return;
   
   // Clear previous paths
-  const paths = svg.querySelectorAll("path.connection-line");
+  const paths = svg.querySelectorAll("path.connection-line, path.connection-line-bg");
   paths.forEach(p => p.remove());
   
   // Clear connected class on cards
@@ -1484,9 +1484,6 @@ function drawConnections() {
     fromEl.classList.add("connected");
     toEl.classList.add("connected");
     
-    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    path.classList.add("connection-line");
-    
     // Beautiful Bezier S-curve
     const controlOffset = Math.max(80, Math.abs(toX - fromX) * 0.45);
     const cp1x = fromX + controlOffset;
@@ -1496,6 +1493,19 @@ function drawConnections() {
     
     const d = `M ${fromX} ${fromY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${toX} ${toY}`;
     
+    // Create background path (mask/halo matching phase background)
+    const pathBg = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    pathBg.classList.add("connection-line-bg");
+    pathBg.setAttribute("d", d);
+    pathBg.setAttribute("fill", "none");
+    pathBg.setAttribute("stroke", "var(--phase-bg, var(--phase-strategy))");
+    pathBg.setAttribute("stroke-width", "8");
+    pathBg.setAttribute("filter", "url(#sketchy-filter)");
+    svg.appendChild(pathBg);
+    
+    // Create foreground path (dashed line)
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.classList.add("connection-line");
     path.setAttribute("d", d);
     path.setAttribute("fill", "none");
     path.setAttribute("stroke", "var(--ink)");
