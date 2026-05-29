@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BC 7.3 Procesmap</title>
+    <!-- Outfit & Architects Daughter from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-phase="strategy">
+    
+    <!-- SVG sketchy filter template -->
+    <svg style="position: absolute; width: 0; height: 0; pointer-events: none;">
+      <defs>
+        <filter id="sketchy-filter" x="-10%" y="-10%" width="120%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </defs>
+    </svg>
+
+    <!-- Floating Whiteboard Toolbar Controls -->
+    <div class="floating-toolbar">
+      <div class="toolbar-section">
+        <nav class="phase-tabs" id="phaseTabs" aria-label="Fases"></nav>
+      </div>
+      <div class="toolbar-divider"></div>
+      <div class="toolbar-section">
+        <div class="filter-group">
+          <span class="control-label">Perspectief</span>
+          <div class="chip-row" id="lensFilters"></div>
+        </div>
+        <div class="filter-group">
+          <span class="control-label">Status</span>
+          <div class="toggle-row" id="stateFilters"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Time Budget Card (top-left) -->
+    <div class="time-budget-card" id="timeBudgetCard">
+      <div class="time-budget-tape"></div>
+      <h3>Fase Tijdlijn</h3>
+      <div class="time-budget-row">
+        <span class="budget-label">Duur:</span>
+        <span class="budget-value">3 weken (15 dagen)</span>
+      </div>
+      <div class="time-budget-row">
+        <span class="budget-label">Gepland:</span>
+        <span class="budget-value" id="plannedDaysValue">0 dagen</span>
+      </div>
+      <div class="time-progress-bar">
+        <div class="time-progress-fill" id="timeProgressFill"></div>
+      </div>
+    </div>
+
+    <!-- Main Whiteboard Canvas -->
+    <main class="process-canvas" id="boardCanvas" aria-label="Procesmap Whiteboard">
+      <div class="canvas-content" id="canvasContent">
+        <!-- Phase Title in top-right corner -->
+        <div class="canvas-phase-title" id="canvasPhaseTitle"></div>
+
+        <!-- Vertical dashed guidelines -->
+        <div class="canvas-guideline" style="left: 33.333%;"></div>
+        <div class="canvas-guideline" style="left: 66.666%;"></div>
+
+        <!-- Hills Area (centered above Reflect) -->
+        <section class="hills-zone" aria-label="Hills">
+          <div class="hill-rail" id="hillRail"></div>
+          <!-- Arrow pointing from Hills to Loop -->
+          <div class="down-arrow-connector">
+            <svg viewBox="0 0 24 50" width="24" height="50">
+              <path d="M12 0 L12 40 M6 34 L12 40 L18 34" fill="none" stroke="#11110f" stroke-width="3" stroke-linecap="round" filter="url(#sketchy-filter)" />
+            </svg>
+          </div>
+        </section>
+
+        <!-- Center Loop & Stage Labels -->
+        <section class="loop-stage" aria-label="Observe Reflect Make procesloop">
+          <div class="loop-wrapper">
+            <svg class="infinity-loop" viewBox="0 0 1200 430" role="img" aria-label="Infinity loop met Observe, Reflect en Make">
+              <path
+                class="loop-shadow"
+                d="M110 215 C210 35 390 35 600 215 C810 395 990 395 1090 215 C990 35 810 35 600 215 C390 395 210 395 110 215"
+              />
+              <path
+                class="loop-line"
+                d="M110 215 C210 35 390 35 600 215 C810 395 990 395 1090 215 C990 35 810 35 600 215 C390 395 210 395 110 215"
+                filter="url(#sketchy-filter)"
+              />
+            </svg>
+
+            <!-- Organic dots and labels on the loop -->
+            <div class="loop-point observe-point" style="left: 9.16%; top: 50%;">
+              <span class="loop-dot"></span>
+              <span class="loop-label">Observe</span>
+            </div>
+            <div class="loop-point reflect-point" style="left: 50%; top: 50%;">
+              <span class="loop-dot"></span>
+              <span class="loop-label">Reflect</span>
+            </div>
+            <div class="loop-point make-point" style="left: 90.83%; top: 50%;">
+              <span class="loop-dot"></span>
+              <span class="loop-label">Make</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Playback Area (centered below Reflect) -->
+        <section class="playback-zone" id="playbackZone" aria-label="Playback">
+          <!-- Arrow pointing from Loop to Playback -->
+          <div class="down-arrow-connector upward-connector">
+            <svg viewBox="0 0 24 50" width="24" height="50">
+              <path d="M12 0 L12 40 M6 34 L12 40 L18 34" fill="none" stroke="#11110f" stroke-width="3" stroke-linecap="round" filter="url(#sketchy-filter)" />
+            </svg>
+          </div>
+          <div class="playback-container" id="playbackCardContainer"></div>
+        </section>
+
+        <!-- SVG container for activity connections -->
+        <svg class="canvas-connections" id="canvasConnections">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="var(--ink)" />
+            </marker>
+          </defs>
+        </svg>
+
+        <!-- Absolute positioned Activity Cards container -->
+        <div class="whiteboard-activities" id="whiteboardActivities"></div>
+      </div>
+    </main>
+
+    <!-- Templates for Dynamic Cards -->
+    <template id="activityTemplate">
+      <article class="activity-card">
+        <div class="activity-pin"></div>
+        <div class="activity-card-content">
+          <h3 class="activity-goal"></h3>
+          <div class="activity-tags">
+            <span class="tag tag-lens"></span>
+            <span class="tag tag-hill"></span>
+            <span class="tag tag-method"></span>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <template id="hillTemplate">
+      <article class="hill-card">
+        <div class="hill-triangle-flag">
+          <svg viewBox="0 0 60 50" width="40" height="35">
+            <polygon points="30,5 5,45 55,45" fill="var(--flag-color)" stroke="#11110f" stroke-width="3" filter="url(#sketchy-filter)" />
+          </svg>
+        </div>
+        <h2></h2>
+        <p></p>
+        <div class="hill-meta">
+          <span></span>
+        </div>
+      </article>
+    </template>
+
+    <template id="playbackTemplate">
+      <div class="playback-card">
+        <div class="playback-tape"></div>
+        <p class="playback-eyebrow">Playback</p>
+        <h2></h2>
+        <div class="playback-grid">
+          <div class="playback-item">
+            <strong>Evaluatie</strong>
+            <p data-field="evidence"></p>
+          </div>
+          <div class="playback-item">
+            <strong>Besluit</strong>
+            <p data-field="decision"></p>
+          </div>
+          <div class="playback-item">
+            <strong>Bijsturing</strong>
+            <p data-field="steering"></p>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <!-- Detail Modal for Expanded Card -->
+    <div class="activity-modal-overlay" id="activityModal" aria-hidden="true">
+      <div class="activity-modal-container">
+        <button class="activity-modal-close" id="modalCloseBtn" aria-label="Sluit modal">&times;</button>
+        <article class="modal-card-back">
+          <!-- Stylistic tape at top to mimic the whiteboard theme -->
+          <div class="modal-tape"></div>
+          
+          <header class="modal-header">
+            <div class="modal-lens-indicators" id="modalLensIndicators"></div>
+            <div class="modal-meta-top">
+              <span class="modal-badge-stage" id="modalStageBadge"></span>
+              <span class="modal-badge-hill" id="modalHillBadge"></span>
+            </div>
+            <h1 class="modal-title" id="modalTitle"></h1>
+            <p class="modal-goal" id="modalGoal"></p>
+          </header>
+          
+          <div class="modal-body-grid">
+            <section class="modal-section-full" id="modalSectionWhy">
+              <h2>Waarom deze activiteit in de MOBUS-case?</h2>
+              <p></p>
+            </section>
+            
+            <section class="modal-section-half" id="modalSectionWithWhom">
+              <h2>Met wie gedaan</h2>
+              <p></p>
+            </section>
+            
+            <section class="modal-section-half" id="modalSectionHow">
+              <h2>Hoe uitgevoerd</h2>
+              <p></p>
+            </section>
+            
+            <section class="modal-section-full" id="modalSectionInsight">
+              <h2>Resultaat / Inzicht</h2>
+              <p class="handwriting-text"></p>
+            </section>
+            
+            <section class="modal-section-full" id="modalSectionSteering">
+              <h2>Ontwerpbesluit / Vervolgstap</h2>
+              <p class="handwriting-textHighlight"></p>
+            </section>
+            
+            <section class="modal-section-full" id="modalSectionEvidence">
+              <h2>Bewijsvoering / Output</h2>
+              <div class="evidence-file-badge">
+                <svg viewBox="0 0 24 24" width="16" height="16">
+                  <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2M13 9V3.5L18.5 9H13Z" fill="var(--ink)" />
+                </svg>
+                <span id="modalEvidenceFilename"></span>
+              </div>
+            </section>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

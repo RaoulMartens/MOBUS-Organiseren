@@ -1,0 +1,5 @@
+server.err.log
+server.out.log
+.agents/
+.gemini/
+node_modules/
