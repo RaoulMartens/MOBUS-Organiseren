@@ -1,0 +1,269 @@
+STRUCTURE
+
+HILLS:
+Rust door fysieke ordening
+Who: De gebruikers
+What: Schuiven en stapelen fysieke tokens om ideeën visueel te groeperen.
+Wow: Zodat chaos verandert in een helder gezamenlijk overzicht.
+
+Autonome prikkel
+Who: De gebruikers
+What: Ervaren dat MOBUS patronen analyseert en ideeën, combinaties of tegenstellingen projecteert.
+Wow: Zodat ze worden verrast en op nieuwe perspectieven komen.
+
+POST IT 1
+Preview:
+
+Titel:
+Content inventory maken
+
+Doel:
+Vastleggen wat fysiek, digitaal en achter de schermen nodig is om rust te creëren met tokens.
+
+Perspectief:
+Technology + UX/UI
+
+Hill:
+Rust door fysieke ordening
+
+Principe:
+Focus on User Outcomes
+
+Kernresultaat:
+De losse onderdelen van token, tafel, wand en systeem werden concreet gemaakt.
+
+uitklapcontent
+
+Waarom casusspecifiek:
+MOBUS bestaat uit meerdere lagen: fysieke tokens, tafelinteractie, wandfeedback en systeemlogica. Zonder content inventory bleef onduidelijk welke informatie waar hoort en wat achter de schermen nodig is.
+
+Hoe uitgevoerd:
+We beschreven wat de gebruiker fysiek doet, welke digitale feedback zichtbaar moet zijn en welke systeemstappen nodig zijn om ideeën te ordenen, clusteren en terug te koppelen.
+
+Output:
+Inventory van fysieke elementen, digitale content, systeemacties en feedbackmomenten.
+
+Consequentie voor proces:
+Deze inventory vormde de basis voor de user flow en de low-fi prototypetest.
+
+POST IT 2
+
+Titel:
+Ontologie en taxonomie afstemmen
+
+Doel:
+Individuele inventories samenbrengen tot één gedeelde structuur voor MOBUS.
+
+Perspectief:
+Technology + UX/UI
+
+Hill:
+Rust door fysieke ordening
+
+Principe:
+Diverse Empowered Teams
+
+Kernresultaat:
+De systeemtaal werd afgestemd voordat de user flow werd uitgewerkt.
+
+Waarom casusspecifiek:
+MOBUS moet ideeën herkennen, ordenen en terugkoppelen. Daarvoor moest duidelijk worden welke typen input, clusters, patronen en systeemreacties bestaan.
+
+Hoe uitgevoerd:
+We brachten de individuele inventories samen en stemden af welke termen, categorieën en relaties belangrijk zijn voor de MOBUS-interactie.
+
+Output:
+Gedeelde taxonomie en ontologie als basis voor de user flow.
+
+Consequentie voor proces:
+De user flow kon daarna niet alleen vanuit schermen worden ontworpen, maar vanuit de logica van ideeën, clusters en systeemreacties.
+
+POST IT 3:
+
+Titel:
+User flow uitwerken
+
+Doel:
+De interacties bepalen waarmee we testen of tokens chaos omzetten in overzicht.
+
+Perspectief:
+User + UX/UI
+
+Hill:
+Rust door fysieke ordening
+
+Principe:
+Focus on User Outcomes
+
+Kernresultaat:
+De kerninteractie werd vertaald naar een testbare flow van input, schuiven, clusteren en beslissen.
+
+uitklapcontent
+
+Waarom casusspecifiek:
+De MOBUS-ervaring bestaat uit fysieke en digitale stappen. De user flow was nodig om te bepalen wat de gebruiker doet, wanneer het systeem reageert en hoe het gezamenlijke resultaat ontstaat.
+
+Hoe uitgevoerd:
+We tekenden de flow uit vanaf het moment dat gebruikers de MOBUS binnenkomen tot het moment waarop zij ideeën clusteren, het systeem patronen toont en de groep een keuze maakt.
+
+Output:
+User flow met gebruikersacties, systeemkeuzes, alternatieve flow en observatiepunten.
+
+Consequentie voor proces:
+De flow maakte duidelijk welke interacties in de low-fi prototypetest moesten worden getest.
+
+POST IT 4
+
+Titel:
+Beslisboom en wandbubbels ontwerpen
+
+Doel:
+Bepalen wanneer MOBUS ingrijpt en hoe autonome input zichtbaar wordt.
+
+Perspectief:
+Technology + UX/UI
+
+Hill:
+Autonome prikkel
+
+Principe:
+Restless Reinvention
+
+Kernresultaat:
+De AI-prikkel werd vertaald naar systeemmomenten en visuele wandfeedback.
+
+Uitklapcontent:
+
+Waarom casusspecifiek:
+MOBUS mag niet zomaar willekeurig ideeën projecteren. De autonome input moet op het juiste moment komen, zodat het gebruikers helpt in plaats van stoort.
+
+Hoe uitgevoerd:
+We ontwierpen een beslisboom voor wanneer MOBUS ingrijpt en maakten visuele richtingen voor wandbubbels. Daarmee onderzochten we hoe ideeën, tegenstellingen of combinaties op de wand kunnen verschijnen.
+
+Output:
+Beslisboom, conceptvisualisatie en eerste look & feel van wandbubbels.
+
+Consequentie voor proces:
+Deze visualisatie vormde de basis voor de provocative sessie en Wizard of Oz-test.
+
+POST IT 5
+
+preview:
+
+Titel:
+Technische expert review
+
+Doel:
+Bepalen hoe de interacties haalbaar getest kunnen worden met Wizard of Oz.
+
+Perspectief:
+Technology
+
+Hill:
+Autonome prikkel
+
+Principe:
+Diverse Empowered Teams
+
+Kernresultaat:
+De test werd technisch haalbaar gemaakt zonder het systeem al volledig te bouwen.
+
+uitklapcontent
+
+Met wie:
+Ruben als expert prototyping / digital storytelling.
+
+Waarom casusspecifiek:
+De autonome werking van MOBUS is technisch complex. Voor Structure was het nog niet nodig om alles echt te bouwen, maar wel om realistisch te testen hoe gebruikers reageren.
+
+Hoe uitgevoerd:
+Met Ruben bepaalden we hoe we de interacties kunnen simuleren via Wizard of Oz. Daarbij speelt het systeem alsof het autonoom reageert, terwijl het achter de schermen wordt aangestuurd.
+
+Output:
+Technische testopzet voor Wizard of Oz, rolverdeling en haalbare prototype-aanpak.
+
+Consequentie voor proces:
+We konden de ervaring testen zonder vast te lopen op technische ontwikkeling.
+
+POST IT 6
+
+preview:
+
+Titel:
+Low-fi tokentest
+
+Doel:
+Testen of schuiven en stapelen van tokens rust en overzicht creëert.
+
+Perspectief:
+User + UX/UI
+
+Hill:
+Rust door fysieke ordening
+
+Principe:
+Focus on User Outcomes
+
+Kernresultaat:
+De kerninteractie werd getest op begrijpelijkheid, rust en samenwerking.
+
+uitklapcontent:
+
+Waarom casusspecifiek:
+De eerste Hill draait om fysieke ordening. Daarom moest ik testen of tokens daadwerkelijk helpen om chaos in een brainstorm om te zetten naar een helder gezamenlijk resultaat.
+
+Hoe uitgevoerd:
+We voerden een low-fi test uit met studenten van de HAN. De deelnemers kregen een herkenbare opdracht: als ontwerpers voor een Coca-Cola-campagne moesten zij individuele inzichten clusteren in richtlijnen en patronen. De tokens stonden voor ideeën en konden worden geschoven, gegroepeerd en gestapeld.
+
+Rolverdeling:
+Jessey — testleider
+Raoul — Wizard of Oz / AI op scherm
+Stijn — ondersteuning Wizard of Oz
+Luca — observator en notulist
+
+Output:
+Observaties, testnotities, reacties van deelnemers en input voor affinity analyse.
+
+Consequentie voor proces:
+De test liet zien welke onderdelen van de fysieke tokeninteractie frictieloos werkten en welke onderdelen onduidelijkheid of risico op informatieverlies veroorzaakten.
+
+PLAYBACK
+
+preview:
+
+Titel:
+Delivery playback
+
+Doel:
+Testresultaten evalueren en fundamenten goedkeuren voor de Detail-fase.
+
+Perspectief:
+User + Business + Technology + UX/UI
+
+Hill:
+Beide Hills
+
+Principe:
+Focus on User Outcomes + Restless Reinvention
+
+Kernbijsturing:
+Van AI die oplossingen geeft naar AI die subtiel creativiteit stimuleert.
+
+uitklapcontent:
+
+Doel:
+De testresultaten van Structure samen met stakeholders evalueren, de fundamenten van het concept goedkeuren en gezamenlijk de Hills voor de Detail-fase vaststellen.
+
+Evaluatie:
+Toin had twijfels bij tokenstapels, omdat ideeën onderaan de stapel kunnen verdwijnen. Ook twijfelde hij of er genoeg fysieke stenen op tafel passen voor een creatieve sessie. Tugba gaf aan dat AI niet de oplossing moet geven, maar creativiteit subtiel moet stimuleren. AI kan bijvoorbeeld juist met een tegenstelling komen in plaats van een antwoord.
+
+Besluit:
+De fysieke tokeninteractie blijft waardevol, maar moet duidelijker omgaan met zichtbaarheid, schaalbaarheid en informatieverlies. De AI-rol moet verschuiven naar subtiele prikkel of tegenstem in plaats van oplossingsmachine.
+
+Bijsturing:
+Van “AI geeft ideeën/oplossingen” naar “AI stimuleert creativiteit met subtiele of tegendraadse input”.
+
+Consequentie voor proces:
+In Detail moet de focus liggen op duidelijke tokenstatussen, zichtbaarheid van ideeën, schaalbaarheid van de tafel en een AI-interactie die gebruikers uitdaagt zonder de regie over te nemen.
+
+De Structure-fase eindigde met het inzicht dat de kerninteractie waardevol is, maar scherper gestructureerd moet worden. Fysieke tokens kunnen rust en overzicht brengen, maar stapelen en schaalbaarheid vragen aandacht. De autonome AI-prikkel blijft relevant, zolang deze niet de oplossing geeft maar subtiel nieuwe richtingen of tegenstellingen aanreikt.

@@ -15,7 +15,7 @@
     <!-- SVG sketchy filter template -->
     <svg style="position: absolute; width: 0; height: 0; pointer-events: none;">
       <defs>
-        <filter id="sketchy-filter" x="-10%" y="-10%" width="120%" height="120%">
+        <filter id="sketchy-filter" filterUnits="userSpaceOnUse" x="-2000" y="-2000" width="8000" height="8000">
           <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
           <feDisplacementMap in="SourceGraphic" in2="noise" scale="3.5" xChannelSelector="R" yChannelSelector="G" />
         </filter>
@@ -42,18 +42,37 @@
 
     <!-- Time Budget Card (top-left) -->
     <div class="time-budget-card" id="timeBudgetCard">
-      <div class="time-budget-tape"></div>
       <h3>Fase Tijdlijn</h3>
       <div class="time-budget-row">
-        <span class="budget-label">Duur:</span>
-        <span class="budget-value">3 weken (15 dagen)</span>
+        <span class="budget-label" id="timePeriodLabel">Duur:</span>
+        <span class="budget-value" id="timePeriodValue">3 weken (15 dagen)</span>
       </div>
       <div class="time-budget-row">
-        <span class="budget-label">Gepland:</span>
+        <span class="budget-label" id="timeStatusLabel">Gepland:</span>
         <span class="budget-value" id="plannedDaysValue">0 dagen</span>
       </div>
-      <div class="time-progress-bar">
-        <div class="time-progress-fill" id="timeProgressFill"></div>
+    </div>
+
+    <!-- Mini Legend Card (bottom-left, above Time Budget) -->
+    <div class="legend-card" id="legendCard">
+      <h3>Legenda</h3>
+      <div class="legend-row">
+        <svg class="legend-line-svg" viewBox="0 0 50 12" style="height: 12px;">
+          <path d="M 2 6 L 48 6" fill="none" stroke="var(--ink)" stroke-width="3" stroke-dasharray="8, 6" />
+        </svg>
+        <div class="legend-text">
+          <span class="legend-label">Inzichtrelatie</span>
+          <span class="legend-desc">Een inzicht uit deze activiteit stuurt een volgende activiteit.</span>
+        </div>
+      </div>
+      <div class="legend-row" style="margin-top: 12px;">
+        <svg class="legend-line-svg" viewBox="0 0 50 30" style="height: 30px; margin-top: 0;">
+          <line x1="25" y1="2" x2="25" y2="28" stroke="rgba(17, 17, 15, 0.35)" stroke-width="3.5" stroke-dasharray="6, 5" />
+        </svg>
+        <div class="legend-text">
+          <span class="legend-label">Fasegrens</span>
+          <span class="legend-desc">Scheiding tussen Observe, Reflect en Make.</span>
+        </div>
       </div>
     </div>
 
@@ -66,6 +85,13 @@
         <!-- Vertical dashed guidelines -->
         <div class="canvas-guideline" style="left: 33.333%;"></div>
         <div class="canvas-guideline" style="left: 66.666%;"></div>
+
+        <!-- Strategy Phase Anchor Card (Organizational Strategic Focus) -->
+        <div class="phase-anchor-card" id="strategyAnchorCard">
+          <div class="anchor-tape"></div>
+          <span class="anchor-eyebrow">Strategische focus</span>
+          <p class="anchor-desc">In deze fase organiseerden we het proces rond de vraag wat MOBUS moet betekenen voor gebruikers, organisatie, technologie en ervaring.</p>
+        </div>
 
         <!-- Hills Area (centered above Reflect) -->
         <section class="hills-zone" aria-label="Hills">
@@ -81,20 +107,20 @@
         <!-- Center Loop & Stage Labels -->
         <section class="loop-stage" aria-label="Observe Reflect Make procesloop">
           <div class="loop-wrapper">
-            <svg class="infinity-loop" viewBox="0 0 1200 430" role="img" aria-label="Infinity loop met Observe, Reflect en Make">
+            <svg class="infinity-loop" viewBox="0 0 1200 500" role="img" aria-label="Infinity loop met Observe, Reflect en Make">
               <path
                 class="loop-shadow"
-                d="M110 215 C210 35 390 35 600 215 C810 395 990 395 1090 215 C990 35 810 35 600 215 C390 395 210 395 110 215"
+                d="M 600 250 C 400 470, 100 420, 100 250 C 100 80, 400 30, 600 250 C 800 470, 1100 420, 1100 250 C 1100 80, 800 30, 600 250"
               />
               <path
                 class="loop-line"
-                d="M110 215 C210 35 390 35 600 215 C810 395 990 395 1090 215 C990 35 810 35 600 215 C390 395 210 395 110 215"
+                d="M 600 250 C 400 470, 100 420, 100 250 C 100 80, 400 30, 600 250 C 800 470, 1100 420, 1100 250 C 1100 80, 800 30, 600 250"
                 filter="url(#sketchy-filter)"
               />
             </svg>
 
             <!-- Organic dots and labels on the loop -->
-            <div class="loop-point observe-point" style="left: 9.16%; top: 50%;">
+            <div class="loop-point observe-point" style="left: 8.333%; top: 50%;">
               <span class="loop-dot"></span>
               <span class="loop-label">Observe</span>
             </div>
@@ -102,7 +128,7 @@
               <span class="loop-dot"></span>
               <span class="loop-label">Reflect</span>
             </div>
-            <div class="loop-point make-point" style="left: 90.83%; top: 50%;">
+            <div class="loop-point make-point" style="left: 91.667%; top: 50%;">
               <span class="loop-dot"></span>
               <span class="loop-label">Make</span>
             </div>
@@ -139,12 +165,31 @@
       <article class="activity-card">
         <div class="activity-pin"></div>
         <div class="activity-card-content">
-          <h3 class="activity-goal"></h3>
-          <div class="activity-tags">
-            <span class="tag tag-lens"></span>
-            <span class="tag tag-hill"></span>
-            <span class="tag tag-method"></span>
+          <div class="activity-main-col">
+            <!-- Top metadata section: Hill & Principle context -->
+            <div class="activity-top-badges">
+              <span class="tag tag-hill"></span>
+              <span class="tag tag-principle"></span>
+            </div>
+            
+            <!-- 1. Goal (Doel) stands out in the middle -->
+            <h3 class="activity-goal-text"></h3>
+            
+            <!-- Bottom metadata section: Perspectief (lens) -->
+            <div class="activity-meta-badges">
+              <span class="tag tag-lens"></span>
+            </div>
+            
+            <!-- 2. Method (Titel) is less important and goes below bottom line -->
+            <p class="activity-method-text"></p>
           </div>
+
+            <!-- 3. Bijsturing highlight strip -->
+            <div class="activity-result-section type-bijsturing" style="display: none;">
+              <span class="result-label">Bijsturing</span>
+              <span class="activity-result-title"></span>
+              <div class="activity-result-meta"></div>
+            </div>
         </div>
       </article>
     </template>
@@ -178,7 +223,7 @@
             <strong>Besluit</strong>
             <p data-field="decision"></p>
           </div>
-          <div class="playback-item">
+          <div class="playback-item playback-item-bijsturing">
             <strong>Bijsturing</strong>
             <p data-field="steering"></p>
           </div>
@@ -242,6 +287,48 @@
           </div>
         </article>
       </div>
+    </div>
+    
+    <!-- Playback Modal -->
+    <div class="activity-modal-overlay" id="playbackModal" aria-hidden="true">
+      <div class="activity-modal-container">
+        <button class="activity-modal-close" id="playbackModalCloseBtn" aria-label="Sluit modal">&times;</button>
+        <article class="modal-card-back">
+          <div class="modal-tape"></div>
+          <header class="modal-header">
+            <div class="modal-meta-top">
+              <span class="modal-badge-stage" style="background-color: var(--muted); border-color: var(--muted); color: #ffffff;">Playback</span>
+            </div>
+            <h1 class="modal-title" id="playbackModalTitle">Testresultaten evalueren voor Detail</h1>
+          </header>
+          <div class="modal-body-grid">
+            <section class="modal-section-full" id="playbackModalSectionEvidence">
+              <h2>Evaluatie</h2>
+              <p></p>
+            </section>
+            <section class="modal-section-full" id="playbackModalSectionDecision">
+              <h2>Besluit</h2>
+              <p></p>
+            </section>
+            <section class="modal-section-full" id="playbackModalSectionSteering">
+              <h2>Bijsturing</h2>
+              <p class="handwriting-textHighlight"></p>
+            </section>
+            <section class="modal-section-full" id="playbackModalSectionConsequence">
+              <h2>Consequentie voor proces</h2>
+              <p></p>
+            </section>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Floating Zoom Controls (bottom-right) -->
+    <div class="zoom-controls">
+      <button id="zoomOut" title="Zoom uit" aria-label="Zoom uit">&minus;</button>
+      <span id="zoomLevel" class="zoom-level">85%</span>
+      <button id="zoomIn" title="Zoom in" aria-label="Zoom in">&plus;</button>
+      <button id="zoomReset" title="Reset zoom" aria-label="Reset zoom">Reset</button>
     </div>
 
     <script src="app.js"></script>
