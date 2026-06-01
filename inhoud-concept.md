@@ -176,35 +176,6 @@ De Concept-fase verschoof van breed verkennen naar gericht selecteren. Dit was n
 Mijn eigen bijsturing:
 Ik besloot de concepten niet verder als brede posterreeks te blijven presenteren, maar terug te brengen naar minder richtingen die technisch, inhoudelijk en ruimtelijk beter toetsbaar zijn.
 
-POST IT 6
-Preview:
-
-Titel:
-Conceptposters (Artefact)
-Fase:
-Make
-Doel:
-De daadwerkelijke concept posters presenteren in de Make fase.
-Perspectief:
-UX/UI + User
-Hill:
-Uit vaste denkpatronen komen
-Principe:
-Restless Reinvention
-Kernresultaat:
-Concept posters gereed.
-
-Uitklapcontent:
-Met wie:
-Ontwerpteam.
-Waarom casusspecifiek:
-Om feedback op te halen en de ontwerpen tastbaar te maken.
-Hoe uitgevoerd:
-We tonen de daadwerkelijke posters van de conceptrichtingen.
-Output:
-Conceptposters_MOBUS_v1.pdf.
-Consequentie voor proces:
-Directe input voor de playback en Structure fase.
 
 CONCEPT STATUS
 Periode:

@@ -11,13 +11,11 @@ const activityConnections = {
   strategy: [
     { from: { id: "strategy-act-6", stage: "Reflect" }, to: { id: "strategy-act-4", stage: "Observe" } },
     { from: { id: "strategy-act-4", stage: "Observe" }, to: { id: "strategy-act-7", stage: "Observe" } },
-    { from: { id: "strategy-act-4", stage: "Observe" }, to: { id: "strategy-act-5", stage: "Make" } },
-    { from: { id: "strategy-act-2", stage: "Reflect" }, to: { id: "strategy-act-8", stage: "Make" } }
+    { from: { id: "strategy-act-4", stage: "Observe" }, to: { id: "strategy-act-5", stage: "Make" } }
   ],
   concept: [
     { from: { id: "concept-act-1", stage: "Reflect" }, to: { id: "concept-act-2", stage: "Make" } },
     { from: { id: "concept-act-2", stage: "Make" }, to: { id: "concept-act-4", stage: "Make" } },
-    { from: { id: "concept-act-4", stage: "Make" }, to: { id: "concept-act-6", stage: "Make" } },
     { from: { id: "concept-act-4", stage: "Make" }, to: { id: "concept-act-3", stage: "Reflect" } },
     { from: { id: "concept-act-3", stage: "Reflect" }, to: { id: "concept-act-5", stage: "Reflect" } }
   ],
@@ -130,22 +128,6 @@ const seedPhases = [
             shortSteeringTitle: "Presenteren\\\\nwerd input ophalen",
             shortSteeringMeta: "Niveau: activiteit\\\\nAanleiding: tijdsdruk",
             evidence: "Gedigitaliseerde associaties rond anders denken, prikkels en autonoom.",
-          },
-          {
-            id: "strategy-act-8",
-            title: "Product Thinking: Artefacten",
-            lens: "UX Design + User",
-            state: "planned",
-            stages: ["Make"],
-            duration: 3,
-            principle: "Focus on User Outcomes",
-            goal: "De productwaarde en core UX-formulering van MOBUS als artefacten vastleggen.",
-            why: "Om te dienen als concrete bewijslast en referentiekader voor het vervolg.",
-            withWhom: "Volledige MOBUS-projectteam.",
-            how: "Het uitwerken van het User Centered Design Canvas en de productdefinitie.",
-            insight: "Kernresultaat: User Centered Design Canvas en product definitie gereed.",
-            steering: "Consequentie voor proces: Directe input voor de Concept-fase.",
-            evidence: "User Centered Design Canvas en productdefinitie.",
           }
         ],
       },
@@ -300,22 +282,6 @@ const seedPhases = [
             insight: "Kernresultaat: Losse ideeën werden bespreekbare conceptalternatieven.",
             steering: "Consequentie voor proces: De posters maakten het mogelijk om niet alleen over ideeën te praten, maar concepten actief te vergelijken, bevragen en filteren.",
             evidence: "Conceptposters, conceptnamen, conceptuitleg en eerste visuele richtingen.",
-          },
-          {
-            id: "concept-act-6",
-            title: "Conceptposters (Artefact)",
-            lens: "UX Design + User",
-            state: "planned",
-            stages: ["Make"],
-            duration: 2,
-            principle: "Restless Reinvention",
-            goal: "De daadwerkelijke concept posters presenteren in de Make fase.",
-            why: "Om feedback op te halen en de ontwerpen tastbaar te maken.",
-            withWhom: "Ontwerpteam",
-            how: "We tonen de daadwerkelijke posters van de conceptrichtingen.",
-            insight: "Kernresultaat: Concept posters gereed.",
-            steering: "Directe input voor de playback en Structure fase.",
-            evidence: "Conceptposters_MOBUS_v1.pdf"
           }
         ],
       },
@@ -705,9 +671,6 @@ const activityPositions = {
   "strategy-act-7": {
     "Observe": { top: "85%", left: "8%", tilt: "-2deg" }
   },
-  "strategy-act-8": {
-    "Make": { top: "15%", left: "80%", tilt: "-1deg" }
-  },
   // Concept phase
   "concept-act-1": {
     "Reflect": { top: "24%", left: "42%", tilt: "-1.5deg" }
@@ -723,9 +686,6 @@ const activityPositions = {
   },
   "concept-act-5": {
     "Reflect": { top: "68%", left: "42%", tilt: "-2deg" }
-  },
-  "concept-act-6": {
-    "Make": { top: "45%", left: "80%", tilt: "1deg" }
   },
   // Structure phase — positions locked to match approved layout (screenshot 2026-06-01)
   "structure-act-1": {

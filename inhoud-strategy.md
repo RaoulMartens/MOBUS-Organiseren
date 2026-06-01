@@ -247,37 +247,6 @@ De methode werd ontworpen om onze probleemstelling te kunnen bevestigen óf ontk
 
 
 
-POST IT 8
-Preview:
-
-Titel:
-Product Thinking: Artefacten
-Fase:
-Make
-Doel:
-De productwaarde en core UX-formulering van MOBUS als artefacten vastleggen.
-Perspectief:
-UX/UI + User
-Hill:
-Nieuw perspectief
-Principe:
-Focus on User Outcomes
-Kernresultaat:
-User Centered Design Canvas en product definitie gereed.
-
-Uitklapcontent:
-Met wie:
-Volledige MOBUS-projectteam.
-Waarom casusspecifiek:
-Om te dienen als concrete bewijslast en referentiekader voor het vervolg.
-Hoe uitgevoerd:
-Het uitwerken van het User Centered Design Canvas en de product definitie.
-Output:
-User Centered Design Canvas en productdefinitie.
-Consequentie voor proces:
-Directe input voor de Concept-fase.
-
-
 Datum:
 23 maart 2026
 
