@@ -539,8 +539,8 @@ const seedPhases = [
             how: "We presenteerden ons huidige gedetailleerde prototype aan Bram. Daarbij lag de focus op de interactie tussen telefoon, tafel, digitale tokens, AI-nudges en wandoutput. Het doel was om te beoordelen of de flow logisch en bruikbaar was, maar ook of de ervaring nog onderscheidend genoeg voelde voor MOBUS als fysieke creatieve ruimte.",
             insight: "Bram gaf aan dat fysieke tokens juist een sterk idee zijn. Volgens hem maken fysieke tokens de interactie onderscheidender, omdat gebruikers letterlijk met hun ideeën kunnen handelen. Dit sluit sterk aan op mentale modellen: een idee wordt een tastbaar object dat je kunt verplaatsen, groeperen en betekenis geven. Daardoor voelt MOBUS minder als een standaard digitaal brainstormscherm en meer als een unieke fysieke-digital experience.",
             steering: "Bijsturing: Van volledig digitale tokens naar een hybride interactie: fysieke tokens als USP, digitale lagen voor informatie en functionaliteit.",
-            shortSteeringTitle: "Fysieke tokens\\\\nterug als USP",
-            shortSteeringMeta: "Niveau: concept\\\\nAanleiding: expert review",
+            shortSteeringTitle: "Fysieke tokens\nterug als USP",
+            shortSteeringMeta: "Niveau: concept\nAanleiding: expert review",
             evidence: "Feedback Bram, Hybride interactie-ontwerp."
           },
           {
