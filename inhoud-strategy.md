@@ -52,7 +52,9 @@ Product Thinking toepassen
 Doel:
 Bepalen waar de echte productwaarde van MOBUS zit: niet in de bus als object, maar in een ervaring die gebruikers uit vaste denkpatronen haalt.
 Perspectief:
-User + Business + Technology + UX/UI
+UX/UI + User
+Fase:
+Reflect
 Hill:
 Uit vaste denkpatronen komen
 Principe:
@@ -114,7 +116,7 @@ POST IT 4
 Preview:
 
 Titel:
-Business-perspectief ophalen
+Interviews (Business-perspectief ophalen)
 Doel:
 Begrijpen hoe MOBUS binnen HAN waarde krijgt, gedragen wordt en praktisch kan functioneren.
 Perspectief:
@@ -146,6 +148,8 @@ Preview:
 
 Titel:
 Empathy maps maken
+Fase:
+Make
 Doel:
 Interviewdata vertalen naar zichtbare behoeften, zorgen en belangen rond MOBUS.
 Perspectief:
@@ -182,7 +186,7 @@ Creatieve associatiesessie bij Connectr
 Doel:
 Business-taal ophalen rond anders denken, prikkels en autonomie.
 Perspectief:
-User
+Business
 Hill:
 Uit vaste denkpatronen komen
 Principe:
@@ -230,16 +234,46 @@ Co-creatiesessie voorbereiden
 Doel:
 Met een 3D-MOBUS toetsen of stakeholders onze probleemstelling herkennen en de ruimte op dezelfde manier begrijpen.
 Perspectief:
-Business + Space/Experience
+User
 Fase:
-Overgang Strategy → Concept
+Observe
 Principe:
-Restless Reinvention
+Diverse Empowered Teams
 Kernresultaat:
 De methode werd ontworpen om onze probleemstelling te kunnen bevestigen óf ontkrachten.
 
 
 
+
+POST IT 8
+Preview:
+
+Titel:
+Product Thinking: Artefacten
+Fase:
+Make
+Doel:
+De productwaarde en core UX-formulering van MOBUS als artefacten vastleggen.
+Perspectief:
+UX/UI + User
+Hill:
+Uit vaste denkpatronen komen
+Principe:
+Focus on User Outcomes
+Kernresultaat:
+User Centered Design Canvas en product definitie gereed.
+
+Uitklapcontent:
+Met wie:
+Volledige MOBUS-projectteam.
+Waarom casusspecifiek:
+Om te dienen als concrete bewijslast en referentiekader voor het vervolg.
+Hoe uitgevoerd:
+Het uitwerken van het User Centered Design Canvas en de product definitie.
+Output:
+User Centered Design Canvas en productdefinitie.
+Consequentie voor proces:
+Directe input voor de Concept-fase.
 
 PLAYBACK:
 Preview:

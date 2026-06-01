@@ -7,9 +7,11 @@ Conceptkader scherpstellen
 Doel:
 De Hill vertalen naar een concreet conceptdoel voor mentale beweging.
 Perspectief:
-User + UX/UI
+User
+Fase:
+Reflect
 Hill:
-Uit vaste denkpatronen komen
+Alle Hills — basis voor samenwerking
 Principe:
 Focus on User Outcomes
 Kernresultaat:
@@ -38,7 +40,7 @@ Verbredende conceptstudie
 Doel:
 Meerdere MOBUS-richtingen genereren zonder direct één oplossing vast te zetten.
 Perspectief:
-User + UX/UI
+UX/UI + User
 Hill:
 Uit vaste denkpatronen komen
 Principe:
@@ -104,7 +106,7 @@ Abstracte conceptrichtingen tastbaar maken voor feedback.
 Perspectief:
 UX/UI + User
 Hill:
-Ruimte die meebeweegt
+Uit vaste denkpatronen komen
 Principe:
 Restless Reinvention
 Kernresultaat:
@@ -140,7 +142,7 @@ Playback met conceptposters
 Doel:
 Concepten filteren richting een haalbare keuze voor fysiek prototypen.
 Perspectief:
-Business + UX/UI + Technology
+Business + Technology + User
 Hill:
 Ruimte die meebeweegt
 Principe:
@@ -173,6 +175,36 @@ Consequentie voor proces:
 De Concept-fase verschoof van breed verkennen naar gericht selecteren. Dit was nodig om de stap naar fysiek prototypen in Structure mogelijk te maken.
 Mijn eigen bijsturing:
 Ik besloot de concepten niet verder als brede posterreeks te blijven presenteren, maar terug te brengen naar minder richtingen die technisch, inhoudelijk en ruimtelijk beter toetsbaar zijn.
+
+POST IT 6
+Preview:
+
+Titel:
+Conceptposters (Artefact)
+Fase:
+Make
+Doel:
+De daadwerkelijke concept posters presenteren in de Make fase.
+Perspectief:
+UX/UI + User
+Hill:
+Uit vaste denkpatronen komen
+Principe:
+Restless Reinvention
+Kernresultaat:
+Concept posters gereed.
+
+Uitklapcontent:
+Met wie:
+Ontwerpteam.
+Waarom casusspecifiek:
+Om feedback op te halen en de ontwerpen tastbaar te maken.
+Hoe uitgevoerd:
+We tonen de daadwerkelijke posters van de conceptrichtingen.
+Output:
+Conceptposters_MOBUS_v1.pdf.
+Consequentie voor proces:
+Directe input voor de playback en Structure fase.
 
 CONCEPT STATUS
 Periode:

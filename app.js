@@ -9,36 +9,37 @@ const flagColors = ["#9d4edd", "#ff70a6", "#06d6a0", "#339af0"];
 
 const activityConnections = {
   strategy: [
-    { from: { id: "strategy-act-1", stage: "Observe" }, to: { id: "strategy-act-3", stage: "Observe" } },
-    { from: { id: "strategy-act-2", stage: "Observe" }, to: { id: "strategy-act-5", stage: "Reflect" } },
-    { from: { id: "strategy-act-3", stage: "Observe" }, to: { id: "strategy-act-5", stage: "Reflect" } },
-    { from: { id: "strategy-act-4", stage: "Observe" }, to: { id: "strategy-act-6", stage: "Reflect" } },
-    { from: { id: "strategy-act-5", stage: "Reflect" }, to: { id: "strategy-act-7", stage: "Make" } },
-    { from: { id: "strategy-act-6", stage: "Reflect" }, to: { id: "strategy-act-7", stage: "Make" } }
+    { from: { id: "strategy-act-6", stage: "Reflect" }, to: { id: "strategy-act-4", stage: "Observe" } },
+    { from: { id: "strategy-act-4", stage: "Observe" }, to: { id: "strategy-act-7", stage: "Observe" } },
+    { from: { id: "strategy-act-4", stage: "Observe" }, to: { id: "strategy-act-5", stage: "Make" } },
+    { from: { id: "strategy-act-3", stage: "Observe" }, to: { id: "strategy-act-5", stage: "Make" } },
+    { from: { id: "strategy-act-2", stage: "Reflect" }, to: { id: "strategy-act-8", stage: "Make" } }
   ],
   concept: [
     { from: { id: "concept-act-1", stage: "Reflect" }, to: { id: "concept-act-2", stage: "Make" } },
-    { from: { id: "concept-act-2", stage: "Make" }, to: { id: "concept-act-3", stage: "Reflect" } },
-    { from: { id: "concept-act-4", stage: "Make" }, to: { id: "concept-act-5", stage: "Reflect" } }
+    { from: { id: "concept-act-2", stage: "Make" }, to: { id: "concept-act-4", stage: "Make" } },
+    { from: { id: "concept-act-4", stage: "Make" }, to: { id: "concept-act-6", stage: "Make" } },
+    { from: { id: "concept-act-4", stage: "Make" }, to: { id: "concept-act-3", stage: "Reflect" } },
+    { from: { id: "concept-act-3", stage: "Reflect" }, to: { id: "concept-act-5", stage: "Reflect" } }
   ],
   structure: [
-    { from: { id: "structure-act-1", stage: "Observe" }, to: { id: "structure-act-2", stage: "Reflect" } },
+    { from: { id: "structure-act-1", stage: "Make" }, to: { id: "structure-act-2", stage: "Reflect" } },
     { from: { id: "structure-act-2", stage: "Reflect" }, to: { id: "structure-act-3", stage: "Make" } },
     { from: { id: "structure-act-3", stage: "Make" }, to: { id: "structure-act-6", stage: "Observe" } },
     { from: { id: "structure-act-4", stage: "Make" }, to: { id: "structure-act-5", stage: "Reflect" } },
-    { from: { id: "structure-act-5", stage: "Reflect" }, to: { id: "structure-act-6", stage: "Observe" } }
+    { from: { id: "structure-act-5", stage: "Reflect" }, to: { id: "structure-act-6", stage: "Observe" } },
+    { from: { id: "structure-act-6", stage: "Observe" }, to: { id: "structure-act-7", stage: "Reflect" } }
   ],
   detail: [
-    { from: { id: "detail-act-1", stage: "Observe" }, to: { id: "detail-act-3", stage: "Observe" } },
-    { from: { id: "detail-act-1", stage: "Observe" }, to: { id: "detail-act-2", stage: "Make" } },
-    { from: { id: "detail-act-1", stage: "Observe" }, to: { id: "detail-act-4", stage: "Reflect" } },
-    { from: { id: "detail-act-3", stage: "Observe" }, to: { id: "detail-act-5", stage: "Make" } },
-    { from: { id: "detail-act-2", stage: "Make" }, to: { id: "detail-act-5", stage: "Make" } },
-    { from: { id: "detail-act-4", stage: "Reflect" }, to: { id: "detail-act-5", stage: "Make" } },
-    { from: { id: "detail-act-5", stage: "Make" }, to: { id: "detail-act-6", stage: "Observe" } },
-    { from: { id: "detail-act-6", stage: "Observe" }, to: { id: "detail-act-7", stage: "Reflect" } }
+    { from: { id: "detail-act-1", stage: "Make" }, to: { id: "detail-act-3", stage: "Observe" } },
+    { from: { id: "detail-act-3", stage: "Observe" }, to: { id: "detail-act-2", stage: "Make" } },
+    { from: { id: "detail-act-4", stage: "Reflect" }, to: { id: "detail-act-2", stage: "Make" } },
+    { from: { id: "detail-act-2", stage: "Make" }, to: { id: "detail-act-6", stage: "Observe" } },
+    { from: { id: "detail-act-6", stage: "Observe" }, to: { id: "detail-act-7", stage: "Reflect" } },
+    { from: { id: "detail-act-7", stage: "Reflect" }, to: { id: "detail-act-5", stage: "Make" } },
+    { from: { id: "detail-act-5", stage: "Make" }, to: { id: "detail-act-8", stage: "Make" } }
   ]
-};
+}
 
 const seedPhases = [
   {
@@ -84,15 +85,15 @@ const seedPhases = [
           {
             id: "strategy-act-2",
             title: "Product Thinking toepassen",
-            lens: "UX Design",
+            lens: "UX Design + User",
             state: "planned",
-            stages: ["Observe"],
+            stages: ["Reflect"],
             duration: 4,
             principle: "Focus on User Outcomes",
             goal: "MOBUS richten op mentale beweging, niet op de bus als object.",
             why: "Bij MOBUS was de verleiding groot om te snel te denken in zichtbare oplossingen zoals schermen, AI, flexibele stoelen, interactieve technologie of de bus als innovatief object. Product Thinking hielp ons om eerst te bepalen wat MOBUS als product moet betekenen voor gebruiker, organisatie, techniek en ervaring.",
             withWhom: "Volledige MOBUS-projectteam.",
-            how: "We analyseerden de MOBUS-case via drie stappen: 1. Business, Users & Understanding the Job (HAN, innovatie, mobiliteit, studenten, onderzoekers). 2. Product Thinking en Core UX (kernervaring aanwakkeren van creativiteit in plaats van showcasen). 3. Problem-Solution-Fit en Product Definition (van passieve werkhouding naar levende interactieve omgeving).",
+            how: "We analyseerden de MOBUS-case via drie stappen: 1. Business, Users & Understanding the Job (HAN, innovatie, mobiliteit, studenten, onderzoekers). 2. Product Thinking en Core UX (kernervaring aanwakkeren van creativiteit inplaats van showcasen). 3. Problem-Solution-Fit en Product Definition (van passieve werkhouding naar levende interactieve omgeving).",
             insight: "Kernresultaat: MOBUS werd gedefinieerd als interactieve creatieve ruimte voor mentale beweging, niet als technologische showcase. Before: MOBUS als zichtbare showcase voor mobiliteit, innovatie en energietransitie. After: MOBUS als interactieve creatieve ruimte die gebruikers fysiek en mentaal in beweging brengt.",
             steering: "Consequentie voor proces: De vervolgactiviteiten gingen minder over uitstraling en positionering, en meer over gebruikersbehoeften, mentale modellen, creatief gedrag, ruimtebeleving en core user experience.",
             evidence: "User Centered Design Canvas, product definition, overzicht van uitdagingen, gebruikersmotivaties, angsten en eerste core UX-formulering.",
@@ -100,7 +101,7 @@ const seedPhases = [
           {
             id: "strategy-act-3",
             title: "Literatuurstudie creativiteit & ruimte",
-            lens: "UX Design",
+            lens: "UX Design + User",
             state: "planned",
             stages: ["Observe"],
             duration: 5,
@@ -116,7 +117,7 @@ const seedPhases = [
           {
             id: "strategy-act-6",
             title: "Creatieve associatiesessie bij Connectr",
-            lens: "User",
+            lens: "Business",
             state: "adjustment",
             stages: ["Reflect"],
             duration: 2,
@@ -127,10 +128,26 @@ const seedPhases = [
             how: "Oorspronkelijk hadden we ruim 15 minuten om onze richting toe te lichten en input op te halen. Tijdens de workshop werd dit ingekort naar 5 minuten. Daarom kozen we voor een snelle associatie-oefening rond drie begrippen: anders denken, prikkels en autonoom.",
             insight: "Resultaat: Bij 'anders denken' kwamen woorden als inspiratie en onbekende omgeving terug. Bij 'prikkels' zagen we zowel positieve (licht, geluid) als negatieve (onrust, afleiding) associaties. Bij 'autonoom' kwamen zelfstandigheid en AI terug, maar ook spanning rond niet zelf beslissen. Before: Onze richting toelichten en daarna input ophalen. After: Direct een korte associatie-oefening inzetten.",
             steering: "Door de onverwachte tijdsdruk zou een presentatie vooral zenden worden, terwijl we juist input nodig hadden van de aanwezige business-stakeholders. Daarom hebben we de activiteit aangepast naar een korte associatie-oefening rond anders denken, prikkels en autonomie. Zo konden we ondanks de beperkte tijd toch bruikbare input ophalen.",
-            shortSteeringTitle: "Presenteren\nwerd input ophalen",
-            shortSteeringMeta: "Niveau: activiteit\nAanleiding: tijdsdruk",
+            shortSteeringTitle: "Presenteren\\\\nwerd input ophalen",
+            shortSteeringMeta: "Niveau: activiteit\\\\nAanleiding: tijdsdruk",
             evidence: "Gedigitaliseerde associaties rond anders denken, prikkels en autonoom.",
           },
+          {
+            id: "strategy-act-8",
+            title: "Product Thinking: Artefacten",
+            lens: "UX Design + User",
+            state: "planned",
+            stages: ["Make"],
+            duration: 3,
+            principle: "Focus on User Outcomes",
+            goal: "De productwaarde en core UX-formulering van MOBUS als artefacten vastleggen.",
+            why: "Om te dienen als concrete bewijslast en referentiekader voor het vervolg.",
+            withWhom: "Volledige MOBUS-projectteam.",
+            how: "Het uitwerken van het User Centered Design Canvas en de productdefinitie.",
+            insight: "Kernresultaat: User Centered Design Canvas en product definitie gereed.",
+            steering: "Consequentie voor proces: Directe input voor de Concept-fase.",
+            evidence: "User Centered Design Canvas en productdefinitie.",
+          }
         ],
       },
       {
@@ -140,7 +157,7 @@ const seedPhases = [
         activities: [
           {
             id: "strategy-act-4",
-            title: "Business-perspectief ophalen",
+            title: "Interviews",
             lens: "Business",
             state: "planned",
             stages: ["Observe"],
@@ -157,11 +174,11 @@ const seedPhases = [
           {
             id: "strategy-act-7",
             title: "Co-creatiesessie voorbereiden",
-            lens: "Business",
+            lens: "User",
             state: "planned",
-            stages: ["Make"],
+            stages: ["Observe"],
             duration: 3,
-            principle: "Restless Reinvention",
+            principle: "Diverse Empowered Teams",
             goal: "Met een 3D-MOBUS onze probleemstelling ruimtelijk toetsen.",
             why: "De overgang van Strategy naar Concept vraagt om concrete validatiemethodes. Deze co-creatiesessie met 3D-modellen stelt ons in staat om de aannames over ruimtelijke herkenbaarheid en interactie direct te toetsen.",
             withWhom: "Opdrachtgever, teamleden en geselecteerde co-creatie deelnemers.",
@@ -180,9 +197,9 @@ const seedPhases = [
           {
             id: "strategy-act-5",
             title: "Empathy maps maken",
-            lens: "User",
+            lens: "User + Business",
             state: "planned",
-            stages: ["Reflect"],
+            stages: ["Make"],
             duration: 3,
             principle: "Focus on User Outcomes",
             goal: "Stakeholderinzichten vertalen naar behoeften en spanningen rond MOBUS.",
@@ -224,7 +241,7 @@ const seedPhases = [
           {
             id: "concept-act-1",
             title: "Conceptkader scherpstellen",
-            lens: "UX Design",
+            lens: "User",
             state: "planned",
             stages: ["Reflect"],
             duration: 2,
@@ -235,12 +252,12 @@ const seedPhases = [
             how: "Ik vertaalde de Hill naar een conceptingdoel. Daarbij bleef het einddoel hetzelfde, maar mochten key insight, context en relevante theorie per conceptalternatief verschillen.",
             insight: "Kernresultaat: Alle conceptalternatieven kregen hetzelfde doel: structuurgerichte gebruikers helpen om vaste denkpatronen te doorbreken. Conceptingdoel: Het mentaal in beweging brengen van structuurgerichte studenten en professionals, zodat zij vaste denkpatronen doorbreken en tot creatieve innovatie en nieuwe perspectieven komen. Key insight: Structuurgerichte professionals willen wel nieuwe perspectieven ontwikkelen, maar ervaren een mentale blokkade door angst voor sociale afwijzing wanneer ze plotseling speels of afwijkend moeten doen.",
             steering: "Consequentie voor proces: Dit kader voorkwam dat de Concept-fase een losse brainstorm werd. Elk alternatief moest te herleiden zijn naar mentale beweging, sociale veiligheid en het doorbreken van routine.",
-            evidence: "Conceptkader, Hill-koppeling, key insight en uitgangspunt voor verbredende conceptstudie.",
+            evidence: "Conceptkader, Hill-koppeling (Alle Hills), key insight en uitgangspunt voor verbredende conceptstudie.",
           },
           {
             id: "concept-act-2",
             title: "Verbredende conceptstudie",
-            lens: "UX Design",
+            lens: "UX Design + User",
             state: "planned",
             stages: ["Make"],
             duration: 4,
@@ -264,22 +281,15 @@ const seedPhases = [
             goal: "Conceptposters toetsen op begrijpelijkheid, structuur en ontwerplogica.",
             why: "De concepten waren gebaseerd op mentale beweging, metaforen en theorie. Daardoor bestond het risico dat ze voor buitenstaanders te abstract of moeilijk te volgen waren. Voor ik ze aan externe stakeholders presenteerde, wilde ik eerst toetsen of ontwerpers the conceptlogica konden begrijpen.",
             withWhom: "Medestudenten Product Design/CMD met ervaring vanuit onder andere Jumbo en Erfgoed Gelderland (belanghebbenden die met een kritische ontwerpersbril kijken naar bruikbaarheid, communicatie en ontwerplogica).",
-            how: "Ik organiseerde een Design Panel waarin peers via de SQUACK-methode feedback gaven op mijn conceptposters. Door mijn projectcontextposter erbij te leggen, gaf ik hen eerst de juiste problem space mee. Daardoor konden ze de concepten gerichter beoordelen.",
+            how: "Ik organiseerde een Design Panel waarin peers via de SQUACK-methode feedback gaven op mijn conceptposters. Het legde de basis voor een scherper resultaat.",
             insight: "Kernresultaat: Peers hielpen om concepten scherper te maken voordat externe stakeholders ze zagen. Resultaat: De feedback hielp om te zien welke concepten begrijpelijk waren, welke toelichting nodig hadden en welke richtingen sterker of zwakker overkwamen.",
             steering: "Consequentie voor proces: De concepten werden aangescherpt voordat ik ze aan bredere stakeholders voorlegde. Hierdoor werd de volgende playback gerichter en minder afhankelijk van mijn eigen uitleg.",
             evidence: "Feedback op conceptposters, verbeterpunten voor communicatie, structuur en conceptuitleg.",
           },
-        ],
-      },
-      {
-        id: "concept-hill-2",
-        title: "Hill 2: Ruimte die meebeweegt",
-        focus: "Who: Creatieve teams. What: Passen de ruimte frictieloos aan hun actuele doel aan. Wow: Zodat de omgeving hun werk altijd optimaal ondersteunt.",
-        activities: [
           {
             id: "concept-act-4",
             title: "Conceptposters maken",
-            lens: "UX Design",
+            lens: "UX Design + User",
             state: "planned",
             stages: ["Make"],
             duration: 4,
@@ -293,9 +303,32 @@ const seedPhases = [
             evidence: "Conceptposters, conceptnamen, conceptuitleg en eerste visuele richtingen.",
           },
           {
+            id: "concept-act-6",
+            title: "Conceptposters (Artefact)",
+            lens: "UX Design + User",
+            state: "planned",
+            stages: ["Make"],
+            duration: 2,
+            principle: "Restless Reinvention",
+            goal: "De daadwerkelijke concept posters presenteren in de Make fase.",
+            why: "Om feedback op te halen en de ontwerpen tastbaar te maken.",
+            withWhom: "Ontwerpteam",
+            how: "We tonen de daadwerkelijke posters van de conceptrichtingen.",
+            insight: "Kernresultaat: Concept posters gereed.",
+            steering: "Directe input voor de playback en Structure fase.",
+            evidence: "Conceptposters_MOBUS_v1.pdf"
+          }
+        ],
+      },
+      {
+        id: "concept-hill-2",
+        title: "Hill 2: Ruimte die meebeweegt",
+        focus: "Who: Creatieve teams. What: Passen de ruimte frictieloos aan hun actuele doel aan. Wow: Zodat de omgeving hun werk altijd optimaal ondersteunt.",
+        activities: [
+          {
             id: "concept-act-5",
             title: "Playback met conceptposters",
-            lens: "Business",
+            lens: "Business + Technology + User",
             state: "adjustment",
             stages: ["Reflect"],
             duration: 3,
@@ -306,8 +339,8 @@ const seedPhases = [
             how: "Eerst lichtte ik de concepten kort toe. Daarna werden op post-its opmerkingen geschreven en vragen gesteld. Vervolgens ging ik gericht in gesprek met de deelnemers over de concepten.",
             insight: "Resultaat: De sessie maakte duidelijk dat de concepten inhoudelijk en technisch nog te abstract waren. Ook merkte ik dat ik te veel presenteerde en dat feedback via post-its niet voor iedereen goed werkte. Belangrijkste feedback: Activatie via prikkels werkt, maar moet goed gedoseerd worden. Er zijn sterke concepten, maar niet alles is even concreet of uitvoerbaar. MOBUS moet niet te veel ideeën tegelijk dragen. Maak het technisch en praktisch beter voorstelbaar. Denk scherper na over wat er fysiek gebouwd of getest kan worden.",
             steering: "Mijn eigen bijsturing: Ik besloot de concepten niet verder als brede posterreeks te blijven presenteren, maar terug te brengen naar minder richtingen die technisch, inhoudelijk en ruimtelijk beter toetsbaar zijn. Before: Een brede set conceptposters met veel verschillende richtingen. After: Terugbrengen naar twee concrete concepten en doorpakken naar een gerichte 1-op-1 met de projectmanager. Consequentie: De Concept-fase verschoof van breed verkennen naar gericht selecteren.",
-            shortSteeringTitle: "Conceptset naar\ntwee concrete richtingen",
-            shortSteeringMeta: "Niveau: activiteit\nAanleiding: complexiteit & haalbaarheid",
+            shortSteeringTitle: "Conceptset naar\\\\ntwee concrete richtingen",
+            shortSteeringMeta: "Niveau: activiteit\\\\nAanleiding: complexiteit & haalbaarheid",
             evidence: "Twee geselecteerde conceptrichtingen en feedbacknotities.",
           },
         ],
@@ -347,23 +380,23 @@ const seedPhases = [
           {
             id: "structure-act-1",
             title: "Content inventory maken",
-            lens: "UX Design",
+            lens: "UX Design + Technology",
             state: "planned",
-            stages: ["Observe"],
+            stages: ["Make"],
             duration: 3,
-            principle: "Focus on User Outcomes",
+            principle: null,
             goal: "Vastleggen wat fysiek, digitaal en achter de schermen nodig is om rust te creëren met tokens.",
             why: "MOBUS bestaat uit meerdere lagen: fysieke tokens, tafelinteractie, wandfeedback en systeemlogica. Zonder content inventory bleef onduidelijk welke informatie waar hoort en wat achter de schermen nodig is.",
             withWhom: "Intern team",
             how: "We beschreven wat de gebruiker fysiek doet, welke digitale feedback zichtbaar moet zijn en welke systeemstappen nodig zijn om ideeën te ordenen, clusteren en terug te koppelen.",
-            insight: "Kernresultaat: De losse onderdelen van token, tafel, wand en systeem werden concreet gemaakt.",
+            insight: "Kernresultaat: De losse onderdelen van token, tafel, wand en systeem werden concreet gemaakt. Beide Hills passen bij de content inventory.",
             steering: "Consequentie voor proces: Deze inventory vormde de basis voor de user flow en de low-fi prototypetest.",
             evidence: "Inventory van fysieke elementen, digitale content, systeemacties en feedbackmomenten.",
           },
           {
             id: "structure-act-2",
             title: "Ontologie en taxonomie afstemmen",
-            lens: "Technology",
+            lens: "Technology + UX Design",
             state: "planned",
             stages: ["Reflect"],
             duration: 2,
@@ -372,14 +405,14 @@ const seedPhases = [
             why: "MOBUS moet ideeën herkennen, ordenen en terugkoppelen. Daarvoor moest duidelijk worden welke typen input, clusters, patronen en systeemreacties bestaan.",
             withWhom: "Intern team",
             how: "We brachten de individuele inventories samen en stemden af welke termen, categorieën en relaties belangrijk zijn voor de MOBUS-interactie.",
-            insight: "Kernresultaat: De systeemtaal werd afgestemd voordat de user flow werd uitgewerkt.",
+            insight: "Kernresultaat: De systeemtaal werd afgestemd voordat de user flow werd uitgewerkt. Beide Hills passen bij deze activiteit.",
             steering: "Consequentie voor proces: De user flow kon daarna niet alleen vanuit schermen worden ontworpen, maar vanuit de logica van ideeën, clusters en systeemreacties.",
             evidence: "Gedeelde taxonomie en ontologie als basis voor de user flow.",
           },
           {
             id: "structure-act-3",
             title: "User flow uitwerken",
-            lens: "UX Design",
+            lens: "User + UX Design",
             state: "planned",
             stages: ["Make"],
             duration: 4,
@@ -388,7 +421,7 @@ const seedPhases = [
             why: "De MOBUS-ervaring bestaat uit fysieke en digitale stappen. De user flow was nodig om te bepalen wat de gebruiker doet, wanneer het systeem reageert en hoe het gezamenlijke resultaat ontstaat.",
             withWhom: "Intern team",
             how: "We tekenden de flow uit vanaf het moment dat gebruikers de MOBUS binnenkomen tot het moment waarop zij ideeën clusteren, het systeem patronen toont en de groep een keuze maakt.",
-            insight: "Kernresultaat: De kerninteractie werd vertaald naar een testbare flow van input, schuiven, clusteren en beslissen.",
+            insight: "Kernresultaat: De kerninteractie werd vertaald naar een testbare flow van input, schuiven, clusteren en beslissen. Kan ook geplaatst worden als artifact.",
             steering: "Consequentie voor proces: De flow maakte duidelijk welke interacties in de low-fi prototypetest moesten worden getest.",
             evidence: "User flow met gebruikersacties, systeemkeuzes, alternatieve flow en observatiepunten.",
           },
@@ -434,7 +467,7 @@ const seedPhases = [
           {
             id: "structure-act-5",
             title: "Technische expert review",
-            lens: "Technology",
+            lens: "Technology + UX Design",
             state: "planned",
             stages: ["Reflect"],
             duration: 2,
@@ -443,10 +476,26 @@ const seedPhases = [
             why: "De autonome werking van MOBUS is technisch complex. Voor Structure was het nog niet nodig om alles echt te bouwen, maar wel om realistisch te testen hoe gebruikers reageren.",
             withWhom: "Ruben als expert prototyping / digital storytelling",
             how: "Met Ruben bepaalden we hoe we de interacties kunnen simuleren via Wizard of Oz. Daarbij speelt het systeem alsof het autonoom reageert, terwijl het achter de schermen wordt aangestuurd.",
-            insight: "Kernresultaat: De test werd technisch haalbaar gemaakt zonder het systeem al volledig te bouwen.",
+            insight: "Kernresultaat: De test werd technisch haalbaar gemaakt zonder het systeem al volledig te bouwen. Beide Hills passen bij deze review.",
             steering: "Consequentie voor proces: We konden de ervaring testen.",
             evidence: "Technische testopzet voor Wizard of Oz, rolverdeling en haalbare prototype-aanpak.",
           },
+          {
+            id: "structure-act-7",
+            title: "Bijsturing: Van fysiek naar digitaal",
+            lens: "UX Design + Technology",
+            state: "adjustment",
+            stages: ["Reflect"],
+            duration: 3,
+            principle: "Restless Reinvention",
+            goal: "De interactie heroverwegen na evaluatie met stakeholders.",
+            why: "Om te bepalen hoe we omgaan met schaalbaarheid en informatieverlies op tafel.",
+            withWhom: "Opdrachtgever + Ontwerpteam",
+            how: "We evalueerden de resultaten en besloten de fysieke tokens digitaal te gaan ondersteunen/uitwerken.",
+            insight: "Kernresultaat: Keuze voor digitale uitwerking van de tokens interactie.",
+            steering: "Bijsturing: Fysieke tokens ➔ digitale tokens.",
+            evidence: "Testresultaten evaluatie en bijgestuurde interactie-opzet.",
+          }
         ],
       },
     ],
@@ -483,7 +532,7 @@ const seedPhases = [
             title: "Content mapping uitvoeren",
             lens: "Technology",
             state: "planned",
-            stages: ["Observe"],
+            stages: ["Make"],
             duration: 3,
             principle: "Focus on User Outcomes",
             goal: "User flow spiegelen aan backendcontent om technische frictie zichtbaar te maken.",
@@ -513,7 +562,7 @@ const seedPhases = [
           {
             id: "detail-act-5",
             title: "Prototype detailleren",
-            lens: "UX Design",
+            lens: "UX Design + Technology",
             state: "planned",
             stages: ["Make"],
             duration: 4,
@@ -525,6 +574,22 @@ const seedPhases = [
             insight: "De interactie werd uitgewerkt van idee-invoer tot clusters, AI-nudges en sessie-output.",
             steering: "De usability test kon zich richten op de vraag of gebruikers de interactie begrepen zonder constante uitleg.",
             evidence: "Gedetailleerd prototype met telefoonflow, tafelflow, wandfeedback, AI-nudges en sessie-output."
+          },
+          {
+            id: "detail-act-8",
+            title: "Opleverpakket samenstellen",
+            lens: "UX Design + Technology + Business",
+            state: "planned",
+            stages: ["Make"],
+            duration: 3,
+            principle: "Diverse Empowered Teams",
+            goal: "De complete documentatie en het prototype overdraagbaar opleveren.",
+            why: "Om de overdracht naar ontwikkelaars en stakeholders frictieloos te laten verlopen.",
+            withWhom: "Ontwerpteam + Opdrachtgever",
+            how: "Bundelen van specificaties, code, assets en user flow in een opleverpakket.",
+            insight: "Kernresultaat: Volledig overdraagbaar opleverpakket gereed.",
+            steering: "Consequentie: Eindoplevering en afsluiting van het project.",
+            evidence: "Opleverpakket_MOBUS_v1.zip"
           }
         ]
       },
@@ -545,7 +610,7 @@ const seedPhases = [
             why: "De backend heeft tijd nodig om relaties te berekenen via de ontologie en AI-suggesties te genereren. Als gebruikers niets zien gebeuren, voelt MOBUS traag of kapot. Daarom moest de interface tussentoestanden tonen.",
             withWhom: "UX/UI + Technical team",
             how: "Ik ontwierp loading states en partial states binnen de interface states. Hierdoor kan de tafel of wand alvast laten zien dat MOBUS verbanden zoekt, voordat de definitieve AI-suggestie verschijnt.",
-            insight: "AI-vertraging werd vertaald naar loading states en partial states.",
+            insight: "AI-vertraging werd vertaald naar loading states and partial states.",
             steering: "De ervaring werd niet alleen technisch haalbaarder, maar ook rustiger en betrouwbaarder voor de gebruiker.",
             evidence: "Ontwerpregels voor loading states, partial states en AI-feedbackmomenten."
           },
@@ -568,16 +633,16 @@ const seedPhases = [
           {
             id: "detail-act-6",
             title: "Usability test uitvoeren",
-            lens: "User",
+            lens: "User + UX Design",
             state: "planned",
             stages: ["Observe"],
             duration: 4,
             principle: "Focus on User Outcomes",
             goal: "Testen of gebruikers de MOBUS-flow begrijpen zonder te veel uitleg.",
-            why: "Detail vraagt om toetsing van functionaliteit, interactie en gebruikservaring. Daarom moest ik testen of de uitgewerkte micro-interacties, tokenlogica and AI-nudges voor gebruikers logisch genoeg waren.",
+            why: "Detail vraagt om toetsing van functionaliteit, interactie en gebruikervaring. Daarom moest ik testen of de uitgewerkte micro-interacties, tokenlogica and AI-nudges voor gebruikers logisch genoeg waren.",
             withWhom: "Doelgroepgebruikers + UX/UI team",
             how: "Gebruikers doorliepen de MOBUS-flow met telefoon, tokens, tafel en AI-acties. Ik observeerde waar zij vastliepen, welke functies uitleg nodig hadden en waar de overgang tussen app, token en tafel onduidelijk werd.",
-            insight: "Gebruikers snapten de richting, maar misten uitleg, zichtbaarheid en samenhang tussen app, token en tafel. Belangrijkste inzichten:\n- Gebruikers begrepen niet meteen wat bij titel en beschrijving ingevuld moest worden.\n- Beschrijvingen waren lastig terug te vinden.\n- Inhoud op tokens haalde gebruikers uit de flow.\n- Functies zoals lijnen, knoppen, bollen en AI-acties hadden uitleg nodig.\n- Systeemacties en gebruikersacties moesten duidelijker gescheiden worden.\n- De AI-nudge werd nuttig gevonden, maar moest niet te veel overnemen.\n- De flow tussen app, token en tafel moest sterker.\n- De tafel moest informatiever worden zonder druk te voelen.",
+            insight: "Gebruikers snapten de richting, maar misten uitleg, zichtbaarheid en samenhang tussen app, token en tafel. Beide Hills passen bij deze usability test.",
             steering: "De Detail-fase moest zich richten op microcopy, tooltips, tokenstatussen, visuele feedback, uitleg van AI-acties en een duidelijkere taakverdeling tussen telefoon, tafel en wand.",
             evidence: "Usability testdata, observaties en verbeterpunten."
           },
@@ -593,7 +658,7 @@ const seedPhases = [
             why: "De test liet zien dat het concept waardevol was, maar dat gebruikers nog te veel moesten raden. Omdat MOBUS juist rust moet brengen, moesten onduidelijke interacties worden opgelost.",
             withWhom: "User + UX/UI team",
             how: "Ik zette per verbeterpunt op een rij wat er misging en welke concrete verbetering nodig was. Daarna koppelde ik deze verbeteringen aan onderdelen van het prototype.",
-            insight: "De interface werd aangescherpt met microcopy, tooltips, previews en duidelijkere systeemfeedback. Voorbeelden van verbeteringen:\n- Placeholdertekst toevoegen bij titel en beschrijving.\n- Beschrijvingen tonen als previews, pop-ups of uitklapbare kaarten.\n- Tokens laten functioneren als herkenbaar object in plaats van informatiekaart.\n- Tooltips en korte labels toevoegen bij functies.\n- Verwijderen visueel herkenbaar maken.\n- Systeemacties en gebruikersacties visueel onderscheiden.\n- AI-nudge gerichter inzetten bij vastlopen of onduidelijke clusters.\n- Een aparte inspiratie-/strategieënlaag toevoegen.\n- Telefoon een vaste plek geven in de flow.\n- App, token en tafel sterker met elkaar verbinden.",
+            insight: "De interface werd aangescherpt met microcopy, tooltips, previews en duidelijkere systeemfeedback. Voorbeelden van verbeteringen:\\\\n- Placeholdertekst toevoegen bij titel en beschrijving.\\\\n- Beschrijvingen tonen als previews, pop-ups of uitklapbare kaarten.\\\\n- Tokens laten functioneren als herkenbaar object in plaats van informatiekaart.\\\\n- Tooltips en korte labels toevoegen bij functies.\\\\n- Verwijderen visueel herkenbaar maken.\\\\n- Systeemacties en gebruikersacties visueel onderscheiden.\\\\n- AI-nudge gerichter inzetten bij vastlopen of onduidelijke clusters.\\\\n- Een aparte inspiratie-/strategieënlaag toevoegen.\\\\n- Telefoon een vaste plek geven in de flow.\\\\n- App, token en tafel sterker met elkaar verbinden.",
             steering: "De verbeteringen vormen input voor de laatste detailiteratie van het prototype.",
             evidence: "Verbeterpuntenmatrix met probleem, oorzaak en concrete verbetering."
           }
@@ -605,11 +670,11 @@ const seedPhases = [
         focus: "Who: De gebruikers. What: Ontvangen pas bij stagnatie een gerichte AI-nudge of tegenstelling. Wow: Zodat ze uit hun denkpatroon komen zonder dat AI de regie overneemt.",
         activities: []
       }
-    ],
-  },
-];
+    ]
+  }
+]
 
-const storageKey = "bc73-process-map-v23";
+const storageKey = "bc73-process-map-v24";
 let state = {
   activePhase: "strategy",
   activeLens: "All",
@@ -624,7 +689,7 @@ const activityPositions = {
     "Observe": { top: "7%", left: "8%", tilt: "-1.5deg" }
   },
   "strategy-act-2": {
-    "Observe": { top: "30%", left: "13%", tilt: "2deg" }
+    "Reflect": { top: "10%", left: "45%", tilt: "2deg" }
   },
   "strategy-act-3": {
     "Observe": { top: "52%", left: "8%", tilt: "-2deg" }
@@ -633,13 +698,16 @@ const activityPositions = {
     "Observe": { top: "70%", left: "10%", tilt: "1deg" }
   },
   "strategy-act-5": {
-    "Reflect": { top: "33%", left: "40%", tilt: "-1.2deg" }
+    "Make": { top: "45%", left: "76%", tilt: "-1.2deg" }
   },
   "strategy-act-6": {
     "Reflect": { top: "60%", left: "42%", tilt: "1.8deg" }
   },
   "strategy-act-7": {
-    "Make": { top: "42%", left: "76%", tilt: "-2deg" }
+    "Observe": { top: "85%", left: "8%", tilt: "-2deg" }
+  },
+  "strategy-act-8": {
+    "Make": { top: "15%", left: "80%", tilt: "-1deg" }
   },
   // Concept phase
   "concept-act-1": {
@@ -657,15 +725,18 @@ const activityPositions = {
   "concept-act-5": {
     "Reflect": { top: "68%", left: "42%", tilt: "-2deg" }
   },
+  "concept-act-6": {
+    "Make": { top: "45%", left: "80%", tilt: "1deg" }
+  },
   // Structure phase — positions locked to match approved layout (screenshot 2026-06-01)
   "structure-act-1": {
-    "Observe": { top: "27%", left: "17%", tilt: "-2deg" }
+    "Make": { top: "20%", left: "76%", tilt: "-2deg" }
   },
   "structure-act-2": {
     "Reflect": { top: "28%", left: "42%", tilt: "1.5deg" }
   },
   "structure-act-3": {
-    "Make": { top: "26%", left: "70%", tilt: "-2deg" }
+    "Make": { top: "35%", left: "70%", tilt: "-2deg" }
   },
   "structure-act-4": {
     "Make": { top: "57%", left: "70%", tilt: "1.5deg" }
@@ -676,9 +747,12 @@ const activityPositions = {
   "structure-act-6": {
     "Observe": { top: "57%", left: "14%", tilt: "2deg" }
   },
+  "structure-act-7": {
+    "Reflect": { top: "68%", left: "45%", tilt: "-2deg" }
+  },
   // Detail phase
   "detail-act-1": {
-    "Observe": { top: "20%", left: "8%", tilt: "2deg" }
+    "Make": { top: "20%", left: "76%", tilt: "2deg" }
   },
   "detail-act-2": {
     "Make": { top: "30%", left: "76%", tilt: "-2deg" }
@@ -697,6 +771,9 @@ const activityPositions = {
   },
   "detail-act-7": {
     "Reflect": { top: "60%", left: "45%", tilt: "-1.8deg" }
+  },
+  "detail-act-8": {
+    "Make": { top: "80%", left: "76%", tilt: "-1.5deg" }
   }
 };
 
@@ -949,7 +1026,8 @@ function loadPhases() {
       if (phase.hills) {
         phase.hills.forEach((hill) => {
           // Sync case-specific Hill titles and focus descriptions
-          const seedHill = seedPhases.find(p => p.id === phase.id)?.hills.find(h => h.id === hill.id);
+          const seedPhase = seedPhases.find(p => p.id === phase.id);
+          const seedHill = seedPhase ? seedPhase.hills.find(h => h.id === hill.id) : null;
           if (seedHill) {
             hill.title = seedHill.title;
             hill.focus = seedHill.focus;
@@ -963,15 +1041,20 @@ function loadPhases() {
               
               // Find matching seed activity to copy new fields
               let seedAct = null;
-              for (const sp of seedPhases) {
-                for (const sh of sp.hills) {
-                  const sa = sh.activities.find(a => a.id === activity.id);
-                  if (sa) {
-                    seedAct = sa;
-                    break;
+              if (seedHill) {
+                seedAct = seedHill.activities.find(a => a.id === activity.id);
+              }
+              if (!seedAct) {
+                for (const sp of seedPhases) {
+                  for (const sh of sp.hills) {
+                    const sa = sh.activities.find(a => a.id === activity.id);
+                    if (sa) {
+                      seedAct = sa;
+                      break;
+                    }
                   }
+                  if (seedAct) break;
                 }
-                if (seedAct) break;
               }
               
               if (seedAct) {
@@ -988,6 +1071,12 @@ function loadPhases() {
                 activity.shortSteering = seedAct.shortSteering; // sync shortSteering
                 activity.shortSteeringTitle = seedAct.shortSteeringTitle; // sync shortSteeringTitle
                 activity.shortSteeringMeta = seedAct.shortSteeringMeta; // sync shortSteeringMeta
+                
+                // Sync new schema/fields from seed phases
+                activity.lens = seedAct.lens;
+                activity.stages = seedAct.stages;
+                activity.state = seedAct.state;
+                activity.principle = seedAct.principle;
               } else if (activity.duration === undefined) {
                 activity.duration = 3;
               }
@@ -998,6 +1087,7 @@ function loadPhases() {
     });
     return parsed;
   } catch (e) {
+    console.error("Error in loadPhases:", e);
     return structuredClone(seedPhases);
   }
 }
@@ -1388,13 +1478,22 @@ function renderLoop() {
       card.querySelector(".activity-method-text").textContent = activity.title;
       
       // 3. Perspectief (badge, UX Design -> UX/UI)
-      let lensText = activity.lens;
-      if (lensText === "UX Design") {
-        lensText = "UX/UI";
+      // Render multiple lens badges if present (e.g. UX Design + User)
+      const lensBadgeContainer = card.querySelector(".activity-meta-badges");
+      if (lensBadgeContainer) {
+        lensBadgeContainer.innerHTML = "";
+        const lensesList = activity.lens.split(/[+,]/).map(s => s.trim());
+        lensesList.forEach(lens => {
+          let lensText = lens;
+          if (lensText === "UX Design") {
+            lensText = "UX/UI";
+          }
+          const badge = document.createElement("span");
+          badge.className = `tag tag-lens lens-${lensClass(lens)}`;
+          badge.textContent = lensText;
+          lensBadgeContainer.appendChild(badge);
+        });
       }
-      const lensBadge = card.querySelector(".tag-lens");
-      lensBadge.textContent = lensText;
-      lensBadge.className = `tag tag-lens lens-${lensClass(activity.lens)}`;
       
       // 4. Hill (badge with ▲ prefix, stripped from 'Hill X:')
       const cleanHillTitle = "▲ " + hill.title.replace(/^Hill \d+:\s*/i, "");
@@ -1488,15 +1587,18 @@ function openActivityModal(activityId, stage) {
   const modal = document.querySelector("#activityModal");
   if (!modal) return;
   
-  // Lens flags
+  // Lens flags (supporting multiple lenses)
   const lensContainer = modal.querySelector("#modalLensIndicators");
   if (lensContainer) {
     lensContainer.innerHTML = "";
-    const flag = document.createElement("div");
-    flag.className = "lens-flag";
-    flag.style.setProperty("--flag-color", getLensColorVar(activity.lens));
-    flag.title = activity.lens;
-    lensContainer.appendChild(flag);
+    const lensesList = activity.lens.split(/[+,]/).map(s => s.trim());
+    lensesList.forEach(lens => {
+      const flag = document.createElement("div");
+      flag.className = "lens-flag";
+      flag.style.setProperty("--flag-color", getLensColorVar(lens));
+      flag.title = lens;
+      lensContainer.appendChild(flag);
+    });
   }
   
   // Meta badges
@@ -1734,7 +1836,8 @@ function toggleProcessState(processState) {
 
 function filteredActivities(activities) {
   return activities.filter((activity) => {
-    const matchesLens = state.activeLens === "All" || activity.lens === state.activeLens;
+    const matchesLens = state.activeLens === "All" || 
+                        activity.lens.split(/[+,]/).map(s => s.trim()).includes(state.activeLens);
     const matchesState = state.visibleStates.includes(activity.state) || 
                          (activity.state === "adjustment" && state.visibleStates.includes("planned"));
     return matchesLens && matchesState;

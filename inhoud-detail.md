@@ -23,6 +23,9 @@ preview:
 Titel:
 Content mapping uitvoeren
 
+Fase:
+Make
+
 Doel:
 User flow spiegelen aan backendcontent om technische frictie zichtbaar te maken.
 
@@ -68,6 +71,9 @@ preview:
 Titel:
 System states ontwerpen
 
+Fase:
+Make
+
 Doel:
 Verwerkingstijd maskeren zonder de flow van gebruikers te breken.
 
@@ -102,6 +108,9 @@ preview:
 
 Titel:
 Taxonomie en metadata toetsen
+
+Fase:
+Observe
 
 Doel:
 Controleren of ruwe input betrouwbaar naar tokens en clusters wordt vertaald.
@@ -141,6 +150,9 @@ preview:
 Titel:
 UX-regels voor visuele rust
 
+Fase:
+Reflect
+
 Doel:
 Voorkomen dat tokens, lijnen en AI-acties de tafel te druk maken.
 
@@ -176,11 +188,14 @@ preview:
 Titel:
 Prototype detailleren
 
+Fase:
+Make
+
 Doel:
 Telefoon, tafel en wand samenbrengen tot één vloeiende MOBUS-flow.
 
 Perspectief:
-UX/UI + Technology
+UX Design + Technology
 
 Hill:
 Vloeiende fysieke-digitale reactie
@@ -210,14 +225,17 @@ post it 6:
 Titel:
 Usability test uitvoeren
 
+Fase:
+Observe
+
 Doel:
 Testen of gebruikers de MOBUS-flow begrijpen zonder te veel uitleg.
 
 Perspectief:
-User + UX/UI
+User + UX Design
 
 Hill:
-Rust door duidelijke system states
+Hill 2 — Rust door duidelijke system states + Hill 1 — Vloeiende fysieke-digitale reactie
 
 Principe:
 Focus on User Outcomes
@@ -253,6 +271,9 @@ Post it 7:
 
 Titel:
 Testinzichten verwerken
+
+Fase:
+Reflect
 
 Doel:
 Usabilityproblemen vertalen naar concrete prototypeverbeteringen.
@@ -294,6 +315,47 @@ Voorbeelden van verbeteringen:
 
 Consequentie voor proces:
 De verbeteringen vormen input voor de laatste detailiteratie van het prototype.
+
+post it 8:
+preview:
+
+Titel:
+Opleverpakket samenstellen
+
+Fase:
+Make
+
+Doel:
+De complete documentatie en het prototype overdraagbaar opleveren.
+
+Perspectief:
+UX Design + Technology + Business
+
+Hill:
+Hill 2 — Rust door duidelijke system states
+
+Principe:
+Diverse Empowered Teams
+
+Kernresultaat:
+Volledig overdraagbaar opleverpakket gereed.
+
+uitklapcontent:
+
+Met wie:
+Ontwerpteam + Opdrachtgever.
+
+Waarom casusspecifiek:
+Om de overdracht naar ontwikkelaars en stakeholders frictieloos te laten verlopen.
+
+Hoe uitgevoerd:
+Bundelen van specificaties, code, assets en user flow in een opleverpakket.
+
+Output:
+Opleverpakket_MOBUS_v1.zip.
+
+Consequentie voor proces:
+Consequentie: Eindoplevering en afsluiting van het project.
 
 PLAYBACK
 

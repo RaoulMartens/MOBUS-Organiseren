@@ -17,17 +17,20 @@ Preview:
 Titel:
 Content inventory maken
 
+Fase:
+Make
+
 Doel:
 Vastleggen wat fysiek, digitaal en achter de schermen nodig is om rust te creëren met tokens.
 
 Perspectief:
-Technology + UX/UI
+UX Design + Technology
 
 Hill:
-Rust door fysieke ordening
+Rust door fysieke ordening + Autonome prikkel
 
 Principe:
-Focus on User Outcomes
+Geen
 
 Kernresultaat:
 De losse onderdelen van token, tafel, wand en systeem werden concreet gemaakt.
@@ -55,10 +58,10 @@ Doel:
 Individuele inventories samenbrengen tot één gedeelde structuur voor MOBUS.
 
 Perspectief:
-Technology + UX/UI
+Technology + UX Design
 
 Hill:
-Rust door fysieke ordening
+Rust door fysieke ordening + Autonome prikkel
 
 Principe:
 Diverse Empowered Teams
@@ -84,7 +87,7 @@ Titel:
 User flow uitwerken
 
 Doel:
-De interacties bepalen waarmee we testen of tokens chaos omzetten in overzicht.
+De interacties bepalen waarmee we testen of tokens chaos omzetten in overzicht. Kan ook geplaatst worden als artifact.
 
 Perspectief:
 User + UX/UI
@@ -157,10 +160,10 @@ Doel:
 Bepalen hoe de interacties haalbaar getest kunnen worden met Wizard of Oz.
 
 Perspectief:
-Technology
+Technology + UX Design
 
 Hill:
-Autonome prikkel
+Rust door fysieke ordening + Autonome prikkel
 
 Principe:
 Diverse Empowered Teams
@@ -226,6 +229,46 @@ Observaties, testnotities, reacties van deelnemers en input voor affinity analys
 
 Consequentie voor proces:
 De test liet zien welke onderdelen van de fysieke tokeninteractie frictieloos werkten en welke onderdelen onduidelijkheid of risico op informatieverlies veroorzaakten.
+
+POST IT 7
+
+Titel:
+Bijsturing: Van fysiek naar digitaal
+
+Fase:
+Reflect (Bijsturing)
+
+Doel:
+De interactie heroverwegen na evaluatie met stakeholders.
+
+Perspectief:
+UX Design + Technology
+
+Hill:
+Rust door fysieke ordening + Autonome prikkel
+
+Principe:
+Restless Reinvention
+
+Kernresultaat:
+Keuze voor digitale uitwerking van de tokens interactie.
+
+uitklapcontent
+
+Met wie:
+Opdrachtgever + Ontwerpteam.
+
+Waarom casusspecifiek:
+Om te bepalen hoe we omgaan met schaalbaarheid en informatieverlies op tafel.
+
+Hoe uitgevoerd:
+We evalueerden de resultaten en besloten de fysieke tokens digitaal te gaan ondersteunen/uitwerken.
+
+Output:
+Testresultaten evaluatie en bijgestuurde interactie-opzet.
+
+Consequentie voor proces:
+Bijsturing: Fysieke tokens ➔ digitale tokens.
 
 PLAYBACK
 
