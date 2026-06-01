@@ -282,6 +282,7 @@ const seedPhases = [
             insight: "Kernresultaat: Losse ideeën werden bespreekbare conceptalternatieven.",
             steering: "Consequentie voor proces: De posters maakten het mogelijk om niet alleen over ideeën te praten, maar concepten actief te vergelijken, bevragen en filteren.",
             evidence: "Conceptposters, conceptnamen, conceptuitleg en eerste visuele richtingen.",
+            image: "images/conceptposters.png",
           }
         ],
       },
@@ -1056,6 +1057,7 @@ function loadPhases() {
                 activity.stages = seedAct.stages;
                 activity.state = seedAct.state;
                 activity.principle = seedAct.principle;
+                activity.image = seedAct.image;
               } else if (activity.duration === undefined) {
                 activity.duration = 3;
               }
@@ -1531,6 +1533,23 @@ function renderLoop() {
         steeringSection.style.display = "none";
       }
 
+      // 7. Image preview on the card itself
+      const imagePreview = card.querySelector(".activity-image-preview");
+      if (imagePreview) {
+        if (activity.image) {
+          imagePreview.style.display = "block";
+          const img = imagePreview.querySelector("img");
+          if (img) img.src = activity.image;
+          imagePreview.onclick = (e) => {
+            e.stopPropagation(); // prevent opening the main activity modal
+            openImageLightbox(activity.image, activity.title);
+          };
+        } else {
+          imagePreview.style.display = "none";
+          imagePreview.onclick = null;
+        }
+      }
+
       // Position the card absolutely
       const pos = getPosition(activity.id, stage, idx);
       card.style.top = pos.top;
@@ -1624,12 +1643,28 @@ function openActivityModal(activityId, stage) {
   // Evidence
   const evidenceSec = modal.querySelector("#modalSectionEvidence");
   const filenameSpan = modal.querySelector("#modalEvidenceFilename");
+  const modalImgPreview = modal.querySelector(".modal-image-preview");
+  
   if (activity.evidence && activity.evidence !== "Placeholder canvas, notities of bronverwijzing." && !activity.evidence.includes("Placeholder")) {
     evidenceSec.style.display = "block";
     filenameSpan.textContent = activity.evidence;
   } else {
     evidenceSec.style.display = "block";
     filenameSpan.textContent = "Geen bewijslast geüpload.";
+  }
+
+  if (modalImgPreview) {
+    if (activity.image) {
+      modalImgPreview.style.display = "block";
+      const img = modalImgPreview.querySelector("img");
+      if (img) img.src = activity.image;
+      modalImgPreview.onclick = () => {
+        openImageLightbox(activity.image, activity.title);
+      };
+    } else {
+      modalImgPreview.style.display = "none";
+      modalImgPreview.onclick = null;
+    }
   }
   
   modal.classList.add("active");
@@ -1702,6 +1737,41 @@ if (playbackModal) {
     }
   });
 }
+
+// Lightbox Modal functions
+function openImageLightbox(imageSrc, title) {
+  const modal = document.querySelector("#imageLightboxModal");
+  if (!modal) return;
+  const img = modal.querySelector("#lightboxImage");
+  if (img) {
+    img.src = imageSrc;
+    img.alt = title || "Conceptposter";
+  }
+  modal.classList.add("active");
+  modal.setAttribute("aria-hidden", "false");
+}
+
+function closeImageLightbox() {
+  const modal = document.querySelector("#imageLightboxModal");
+  if (!modal) return;
+  modal.classList.remove("active");
+  modal.setAttribute("aria-hidden", "true");
+}
+
+const lightboxCloseBtn = document.querySelector("#lightboxCloseBtn");
+const imageLightboxModal = document.querySelector("#imageLightboxModal");
+
+if (lightboxCloseBtn) {
+  lightboxCloseBtn.addEventListener("click", closeImageLightbox);
+}
+if (imageLightboxModal) {
+  imageLightboxModal.addEventListener("click", (e) => {
+    if (e.target === imageLightboxModal) {
+      closeImageLightbox();
+    }
+  });
+}
+
 
 window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {

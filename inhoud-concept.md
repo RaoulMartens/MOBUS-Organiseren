@@ -131,6 +131,7 @@ Voorbeelden van conceptrichtingen:
 - Mo-bubbel-bus
 Output:
 Conceptposters, conceptnamen, conceptuitleg en eerste visuele richtingen.
+![Conceptposters](images/conceptposters.png)
 Consequentie voor proces:
 De posters maakten het mogelijk om niet alleen over ideeën te praten, maar concepten actief te vergelijken, bevragen en filteren.
 

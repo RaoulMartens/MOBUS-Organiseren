@@ -182,6 +182,11 @@
             
             <!-- 2. Method (Titel) is less important and goes below bottom line -->
             <p class="activity-method-text"></p>
+            
+            <!-- 4. Image preview -->
+            <div class="activity-image-preview" style="display: none;">
+              <img src="" alt="Voorbeeld" />
+            </div>
           </div>
 
             <!-- 3. Bijsturing highlight strip -->
@@ -283,6 +288,9 @@
                 </svg>
                 <span id="modalEvidenceFilename"></span>
               </div>
+              <div class="modal-image-preview" style="display: none; margin-top: 10px; border: 2.5px solid var(--ink); border-radius: 4px; overflow: hidden; cursor: pointer; max-height: 200px; max-width: 300px; background: white; box-shadow: 4px 4px 0 rgba(17, 17, 15, 0.15);">
+                <img src="" alt="Voorbeeld" style="width: 100%; height: 100%; object-fit: contain; display: block;" />
+              </div>
             </section>
           </div>
         </article>
@@ -329,6 +337,14 @@
       <span id="zoomLevel" class="zoom-level">85%</span>
       <button id="zoomIn" title="Zoom in" aria-label="Zoom in">&plus;</button>
       <button id="zoomReset" title="Reset zoom" aria-label="Reset zoom">Reset</button>
+    </div>
+
+    <!-- Lightbox Modal for Image Preview -->
+    <div class="activity-modal-overlay" id="imageLightboxModal" aria-hidden="true">
+      <div class="activity-modal-container" style="width: auto; max-width: 90vw; background: transparent; border: none; box-shadow: none; align-items: center;">
+        <button class="activity-modal-close" id="lightboxCloseBtn" aria-label="Sluit lightbox" style="color: white; font-size: 2.5rem; top: -10px; right: -10px; background: rgba(0,0,0,0.5); border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border: 2.5px solid white;">&times;</button>
+        <img id="lightboxImage" src="" alt="Conceptposter" style="max-width: 100%; max-height: 80vh; border: 4px solid var(--ink); border-radius: 8px; box-shadow: 10px 10px 0 rgba(17, 17, 15, 0.2); object-fit: contain; background: white;" />
+      </div>
     </div>
 
     <script src="app.js"></script>
