@@ -993,6 +993,13 @@ function loadPhases() {
           }
 
           if (hill.activities) {
+            hill.activities = hill.activities.filter(activity => {
+              return seedPhases.some(sp => 
+                sp.hills.some(sh => 
+                  sh.activities.some(sa => sa.id === activity.id)
+                )
+              );
+            });
             hill.activities.forEach((activity) => {
               if (activity.state === "actual") {
                 activity.state = "planned";
