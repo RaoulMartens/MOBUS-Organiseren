@@ -63,8 +63,8 @@ const seedPhases = [
     hills: [
       {
         id: "strategy-hill-1",
-        title: "Hill 1: Uit vaste denkpatronen komen",
-        focus: "Who: Vastgeroeste werkers. What: Worden intuïtief uit hun vaste denkpatroon gehaald. Wow: Zodat ze nieuwe perspectieven genereren.",
+        title: "Hill 1: Nieuw perspectief",
+        focus: "Who: Gebruikers die vastzitten in een standaard denkpatroon. What: Ervaren een creatieve MOBUS-ruimte die hen uit hun routine haalt. Wow: Zodat ze nieuwe perspectieven ontdekken.",
         activities: [
           {
             id: "strategy-act-1",
@@ -152,8 +152,8 @@ const seedPhases = [
       },
       {
         id: "strategy-hill-2",
-        title: "Hill 2: Ruimte die meebeweegt",
-        focus: "Who: Creatieve teams. What: Passen de ruimte flexibel aan hun doel aan. Wow: Zodat de omgeving hun werk altijd optimaal ondersteunt.",
+        title: "Hill 2: Rustige HAN-ruimte",
+        focus: "Who: Het bestuur en HAN-stakeholders. What: Krijgen een rustige ruimte voor overleg en activiteiten. Wow: Zodat MOBUS aansluit bij de visie en werkomgeving van de HAN.",
         activities: [
           {
             id: "strategy-act-4",
@@ -191,8 +191,8 @@ const seedPhases = [
       },
       {
         id: "strategy-hill-3",
-        title: "Hill 3: Autonomie zonder controleverlies",
-        focus: "Who: Samenwerkers. What: Krijgen een prikkelvrije en veilige context. Wow: Zodat ze zonder aarzeling durven experimenteren en creëren.",
+        title: "Hill 3: Modulaire creatieve werkplek",
+        focus: "Who: Studenten die een creatieve sessie uitvoeren. What: Gebruiken een modulaire werkplek die interactie uitlokt. Wow: Zodat creativiteit makkelijker op gang komt.",
         activities: [
           {
             id: "strategy-act-5",

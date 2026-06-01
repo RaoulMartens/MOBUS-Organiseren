@@ -22,7 +22,7 @@ Bepalen hoe we als team de MOBUS-case organiseren, zodat we doelgericht kunnen o
 Perspectief:
 Process / Teamorganisatie
 Hill:
-Alle Hills — basis voor samenwerking
+Nieuw perspectief
 Principe:
 Diverse Empowered Teams
 Kernresultaat:
@@ -56,7 +56,7 @@ UX/UI + User
 Fase:
 Reflect
 Hill:
-Uit vaste denkpatronen komen
+Nieuw perspectief
 Principe:
 Focus on User Outcomes
 Kernresultaat:
@@ -92,7 +92,7 @@ Onderzoeken hoe ruimte, prikkels en gedrag creativiteit kunnen activeren, zodat 
 Perspectief:
 User + UX/UI
 Hill:
-Uit vaste denkpatronen komen
+Nieuw perspectief
 Principe:
 Diverse Empowered Teams + Restless Reinvention
 Kernresultaat:
@@ -122,7 +122,7 @@ Begrijpen hoe MOBUS binnen HAN waarde krijgt, gedragen wordt en praktisch kan fu
 Perspectief:
 Business
 Hill:
-Ruimte die meebeweegt
+Rustige HAN-ruimte
 Principe:
 Diverse Empowered Teams
 Kernresultaat:
@@ -155,7 +155,7 @@ Interviewdata vertalen naar zichtbare behoeften, zorgen en belangen rond MOBUS.
 Perspectief:
 User + Business
 Hill:
-Autonomie zonder controleverlies
+Modulaire creatieve werkplek
 Principe:
 Focus on User Outcomes
 Kernresultaat:
@@ -188,7 +188,7 @@ Business-taal ophalen rond anders denken, prikkels en autonomie.
 Perspectief:
 Business
 Hill:
-Uit vaste denkpatronen komen
+Nieuw perspectief
 Principe:
 Restless Reinvention
 Bijsturing:
@@ -235,6 +235,8 @@ Doel:
 Met een 3D-MOBUS toetsen of stakeholders onze probleemstelling herkennen en de ruimte op dezelfde manier begrijpen.
 Perspectief:
 User
+Hill:
+Rustige HAN-ruimte
 Fase:
 Observe
 Principe:
@@ -257,7 +259,7 @@ De productwaarde en core UX-formulering van MOBUS als artefacten vastleggen.
 Perspectief:
 UX/UI + User
 Hill:
-Uit vaste denkpatronen komen
+Nieuw perspectief
 Principe:
 Focus on User Outcomes
 Kernresultaat:
@@ -275,23 +277,6 @@ User Centered Design Canvas en productdefinitie.
 Consequentie voor proces:
 Directe input voor de Concept-fase.
 
-PLAYBACK:
-Preview:
-
-Titel:
-Playback met Toin
-Doel:
-Toetsen of onze MOBUS-richting aansloot bij de visie van de opdrachtgever en bepalen welke betekenis centraal moest staan.
-Perspectief:
-Business + User + UX/UI
-Hill:
-Uit vaste denkpatronen komen
-Principe:
-Focus on User Outcomes + Restless Reinvention
-Kernbijsturing:
-Van mobiliteitspronkstuk naar mentale mobiliteit: stilstaan, maar toch mobiel zijn in je hoofd.
-
-Uitklapcontent:
 
 Datum:
 23 maart 2026
