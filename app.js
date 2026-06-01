@@ -23,7 +23,6 @@ const activityConnections = {
     { from: { id: "structure-act-1", stage: "Make" }, to: { id: "structure-act-2", stage: "Reflect" } },
     { from: { id: "structure-act-2", stage: "Reflect" }, to: { id: "structure-act-3", stage: "Make" } },
     { from: { id: "structure-act-3", stage: "Make" }, to: { id: "structure-act-6", stage: "Observe" } },
-    { from: { id: "structure-act-4", stage: "Make" }, to: { id: "structure-act-5", stage: "Reflect" } },
     { from: { id: "structure-act-5", stage: "Reflect" }, to: { id: "structure-act-6", stage: "Observe" } },
     { from: { id: "structure-act-6", stage: "Observe" }, to: { id: "structure-act-7", stage: "Reflect" } }
   ],
@@ -413,22 +412,7 @@ const seedPhases = [
         title: "Autonome prikkel",
         focus: "Who: De gebruikers. What: Ervaren dat MOBUS patronen analyseert en ideeën, combinaties of tegenstellingen projecteert. Wow: Zodat ze worden verrast en op nieuwe perspectieven komen.",
         activities: [
-          {
-            id: "structure-act-4",
-            title: "Beslisboom en wandbubbels ontwerpen",
-            lens: "UX Design",
-            state: "planned",
-            stages: ["Make"],
-            duration: 3,
-            principle: "Restless Reinvention",
-            goal: "Bepalen wanneer MOBUS ingrijpt en hoe autonome input zichtbaar wordt.",
-            why: "MOBUS mag niet zomaar willekeurig ideeën projecteren. De autonome input moet op het juiste moment komen, zodat het gebruikers helpt in plaats van stoort.",
-            withWhom: "Intern team",
-            how: "We ontwierpen een beslisboom voor wanneer MOBUS ingrijpt en maakten visuele richtingen voor wandbubbels. Daarmee onderzochten we hoe ideeën, tegenstellingen of combinaties op de wand kunnen verschijnen.",
-            insight: "Kernresultaat: De AI-prikkel werd vertaald naar systeemmomenten en visuele wandfeedback.",
-            steering: "Consequentie voor proces: Deze visualisatie vormde de basis voor de provocative sessie en Wizard of Oz-test.",
-            evidence: "Beslisboom, conceptvisualisatie en eerste look & feel van wandbubbels.",
-          },
+
           {
             id: "structure-act-5",
             title: "Technische expert review",
@@ -697,9 +681,7 @@ const activityPositions = {
   "structure-act-3": {
     "Make": { top: "35%", left: "70%", tilt: "-2deg" }
   },
-  "structure-act-4": {
-    "Make": { top: "57%", left: "70%", tilt: "1.5deg" }
-  },
+
   "structure-act-5": {
     "Reflect": { top: "55%", left: "43%", tilt: "-1.5deg" }
   },
