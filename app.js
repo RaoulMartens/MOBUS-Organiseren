@@ -1477,7 +1477,13 @@ function renderLoop() {
       
       // 5. Principe (badge with SVG icon)
       const principleTag = card.querySelector(".tag-principle");
-      principleTag.innerHTML = getPrincipleIconSvg(activity.principle) + "<span>" + activity.principle + "</span>";
+      if (activity.principle) {
+        principleTag.style.display = "inline-flex";
+        principleTag.innerHTML = getPrincipleIconSvg(activity.principle) + "<span>" + activity.principle + "</span>";
+      } else {
+        principleTag.style.display = "none";
+        principleTag.innerHTML = "";
+      }
       
       // 6. Bijsturing highlight strip (if state is adjustment and adjustment is active)
       const steeringSection = card.querySelector(".activity-result-section.type-bijsturing");
