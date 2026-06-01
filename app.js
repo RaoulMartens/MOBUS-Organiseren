@@ -64,7 +64,7 @@ const seedPhases = [
       {
         id: "strategy-hill-1",
         title: "Hill 1: Uit vaste denkpatronen komen",
-        focus: "Who: Vastgeroeste werkers. What: Worden intuïtief uit hun vaste denkpatroon gehaald. Wow: Zodat ze direct nieuwe perspectieven genereren.",
+        focus: "Who: Vastgeroeste werkers. What: Worden intuïtief uit hun vaste denkpatroon gehaald. Wow: Zodat ze nieuwe perspectieven genereren.",
         activities: [
           {
             id: "strategy-act-1",
@@ -153,7 +153,7 @@ const seedPhases = [
       {
         id: "strategy-hill-2",
         title: "Hill 2: Ruimte die meebeweegt",
-        focus: "Who: Creatieve teams. What: Passen de ruimte frictieloos aan hun actuele doel aan. Wow: Zodat de omgeving hun werk altijd optimaal ondersteunt.",
+        focus: "Who: Creatieve teams. What: Passen de ruimte flexibel aan hun doel aan. Wow: Zodat de omgeving hun werk altijd optimaal ondersteunt.",
         activities: [
           {
             id: "strategy-act-4",
@@ -192,7 +192,7 @@ const seedPhases = [
       {
         id: "strategy-hill-3",
         title: "Hill 3: Autonomie zonder controleverlies",
-        focus: "Who: Samenwerkers. What: Krijgen een ordeelvrije en veilige context. Wow: Zodat ze zonder aarzeling durven experimenteren en creëren.",
+        focus: "Who: Samenwerkers. What: Krijgen een prikkelvrije en veilige context. Wow: Zodat ze zonder aarzeling durven experimenteren en creëren.",
         activities: [
           {
             id: "strategy-act-5",
