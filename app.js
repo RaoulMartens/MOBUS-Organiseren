@@ -22,7 +22,7 @@ const activityConnections = {
   structure: [
     { from: { id: "structure-act-1", stage: "Make" }, to: { id: "structure-act-2", stage: "Reflect" } },
     { from: { id: "structure-act-2", stage: "Reflect" }, to: { id: "structure-act-3", stage: "Make" } },
-    { from: { id: "structure-act-3", stage: "Make" }, to: { id: "structure-act-6", stage: "Observe" } },
+    { from: { id: "structure-act-3", stage: "Make" }, to: { id: "structure-act-5", stage: "Reflect" } },
     { from: { id: "structure-act-5", stage: "Reflect" }, to: { id: "structure-act-6", stage: "Observe" } },
     { from: { id: "structure-act-6", stage: "Observe" }, to: { id: "structure-act-7", stage: "Reflect" } }
   ],
