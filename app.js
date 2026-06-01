@@ -1004,6 +1004,15 @@ function loadPhases() {
                 )
               );
             });
+
+            if (seedHill && seedHill.activities) {
+              seedHill.activities.forEach(sa => {
+                if (!hill.activities.some(a => a.id === sa.id)) {
+                  hill.activities.push(structuredClone(sa));
+                }
+              });
+            }
+
             hill.activities.forEach((activity) => {
               if (activity.state === "actual") {
                 activity.state = "planned";
