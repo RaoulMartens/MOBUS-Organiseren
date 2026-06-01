@@ -12,7 +12,6 @@ const activityConnections = {
     { from: { id: "strategy-act-6", stage: "Reflect" }, to: { id: "strategy-act-4", stage: "Observe" } },
     { from: { id: "strategy-act-4", stage: "Observe" }, to: { id: "strategy-act-7", stage: "Observe" } },
     { from: { id: "strategy-act-4", stage: "Observe" }, to: { id: "strategy-act-5", stage: "Make" } },
-    { from: { id: "strategy-act-3", stage: "Observe" }, to: { id: "strategy-act-5", stage: "Make" } },
     { from: { id: "strategy-act-2", stage: "Reflect" }, to: { id: "strategy-act-8", stage: "Make" } }
   ],
   concept: [
