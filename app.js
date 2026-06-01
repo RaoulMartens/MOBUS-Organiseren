@@ -33,6 +33,7 @@ const activityConnections = {
     { from: { id: "detail-act-2", stage: "Make" }, to: { id: "detail-act-6", stage: "Observe" } },
     { from: { id: "detail-act-6", stage: "Observe" }, to: { id: "detail-act-7", stage: "Reflect" } },
     { from: { id: "detail-act-7", stage: "Reflect" }, to: { id: "detail-act-5", stage: "Make" } },
+    { from: { id: "detail-act-5", stage: "Make" }, to: { id: "detail-act-9", stage: "Reflect" } },
     { from: { id: "detail-act-5", stage: "Make" }, to: { id: "detail-act-8", stage: "Make" } }
   ]
 }
@@ -525,6 +526,24 @@ const seedPhases = [
             evidence: "Gedetailleerd prototype met telefoonflow, tafelflow, wandfeedback, AI-nudges en sessie-output."
           },
           {
+            id: "detail-act-9",
+            title: "Expert review met Bram",
+            lens: "UX Design + User",
+            state: "adjustment",
+            stages: ["Reflect"],
+            duration: 3,
+            principle: "Restless Reinvention",
+            goal: "Toetsen of het gedetailleerde prototype de juiste balans heeft tussen digitale functionaliteit en fysieke interactie.",
+            why: "In Structure hadden we fysieke tokens losgelaten als hoofdinteractie, omdat ze beperkingen hadden in informatieruimte, schaalbaarheid en het uitwerken van functies zoals bewerken, clusteren en AI-suggesties. In Detail wilden we daarom toetsen of de digitale uitwerking nog steeds de kracht van MOBUS vasthield: een fysieke, ervaringsgerichte ruimte die gebruikers mentaal in beweging brengt.",
+            withWhom: "Bram, UX/UI-expert",
+            how: "We presenteerden ons huidige gedetailleerde prototype aan Bram. Daarbij lag de focus op de interactie tussen telefoon, tafel, digitale tokens, AI-nudges en wandoutput. Het doel was om te beoordelen of de flow logisch en bruikbaar was, maar ook of de ervaring nog onderscheidend genoeg voelde voor MOBUS als fysieke creatieve ruimte.",
+            insight: "Bram gaf aan dat fysieke tokens juist een sterk idee zijn. Volgens hem maken fysieke tokens de interactie onderscheidender, omdat gebruikers letterlijk met hun ideeën kunnen handelen. Dit sluit sterk aan op mentale modellen: een idee wordt een tastbaar object dat je kunt verplaatsen, groeperen en betekenis geven. Daardoor voelt MOBUS minder als een standaard digitaal brainstormscherm en meer als een unieke fysieke-digital experience.",
+            steering: "Bijsturing: Van volledig digitale tokens naar een hybride interactie: fysieke tokens als USP, digitale lagen voor informatie en functionaliteit.",
+            shortSteeringTitle: "Fysieke tokens\\\\nterug als USP",
+            shortSteeringMeta: "Niveau: concept\\\\nAanleiding: expert review",
+            evidence: "Feedback Bram, Hybride interactie-ontwerp."
+          },
+          {
             id: "detail-act-8",
             title: "Opleverpakket samenstellen",
             lens: "UX Design + Technology + Business",
@@ -715,6 +734,9 @@ const activityPositions = {
   },
   "detail-act-8": {
     "Make": { top: "80%", left: "76%", tilt: "-1.5deg" }
+  },
+  "detail-act-9": {
+    "Reflect": { top: "80%", left: "45%", tilt: "1.5deg" }
   }
 };
 

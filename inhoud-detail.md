@@ -357,6 +357,58 @@ Opleverpakket_MOBUS_v1.zip.
 Consequentie voor proces:
 Consequentie: Eindoplevering en afsluiting van het project.
 
+
+post it 9:
+preview:
+
+Titel:
+Expert review met Bram
+
+Doel:
+Toetsen of het gedetailleerde prototype de juiste balans heeft tussen digitale functionaliteit en fysieke interactie.
+
+Perspectief:
+UX/UI + User
+
+Hill:
+Vloeiende fysieke-digitale reactie
+
+Principe:
+Restless Reinvention
+
+Bijsturing:
+Digitale tokens → fysieke tokens terug als USP
+
+uitklapcontent:
+
+Datum:
+[datum invullen]
+
+Met wie:
+Bram, UX/UI-expert.
+
+Waarom casusspecifiek:
+In Structure hadden we fysieke tokens losgelaten als hoofdinteractie, omdat ze beperkingen hadden in informatieruimte, schaalbaarheid en het uitwerken van functies zoals bewerken, clusteren en AI-suggesties. In Detail wilden we daarom toetsen of de digitale uitwerking nog steeds de kracht van MOBUS vasthield: een fysieke, ervaringsgerichte ruimte die gebruikers mentaal in beweging brengt.
+
+Hoe uitgevoerd:
+We presenteerden ons huidige gedetailleerde prototype aan Bram. Daarbij lag de focus op de interactie tussen telefoon, tafel, digitale tokens, AI-nudges en wandoutput. Het doel was om te beoordelen of de flow logisch en bruikbaar was, maar ook of de ervaring nog onderscheidend genoeg voelde voor MOBUS als fysieke creatieve ruimte.
+
+Resultaat:
+Bram gaf aan dat fysieke tokens juist een sterk idee zijn. Volgens hem maken fysieke tokens de interactie onderscheidender, omdat gebruikers letterlijk met hun ideeën kunnen handelen. Dit sluit sterk aan op mentale modellen: een idee wordt een tastbaar object dat je kunt verplaatsen, groeperen en betekenis geven. Daardoor voelt MOBUS minder als een standaard digitaal brainstormscherm en meer als unieke fysieke-digital experience.
+
+Before:
+De richting was om volledig digitaal verder te gaan, zodat alle functies goed uitgewerkt en getest konden worden.
+
+After:
+Fysieke tokens worden opnieuw meegenomen als belangrijk onderdeel van de ervaring, maar niet als drager van alle informatie. De token wordt vooral een tastbare trigger, terwijl details, metadata en bewerkingen digitaal ondersteund blijven.
+
+Bijsturing:
+Van volledig digitale tokens naar een hybride interactie: fysieke tokens als USP, digitale lagen voor informatie en functionaliteit.
+
+Consequentie voor proces:
+In Detail moet de prototypeflow opnieuw worden aangescherpt. De vraag is niet meer “fysiek óf digitaal”, maar hoe fysieke tokens en digitale ondersteuning elkaar versterken. Dit betekent dat de eindversie moet laten zien hoe een fysieke token gekoppeld is aan digitale informatie, AI-feedback en overzicht op tafel of wand.
+
+
 PLAYBACK
 
 Titel:
